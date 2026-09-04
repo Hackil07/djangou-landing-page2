@@ -196,6 +196,62 @@
             .time-box { padding: 1rem 0.5rem; }
             .waitlist-section { padding: 1.5rem; }
         }
+    
+        /* Modal Premium */
+        .modal-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+            display: flex; align-items: center; justify-content: center;
+            opacity: 0; visibility: hidden;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .modal-overlay.active {
+            opacity: 1; visibility: visible;
+        }
+        .modal-content {
+            background: var(--color-card);
+            border: 1px solid rgba(109, 40, 217, 0.2);
+            padding: 2.5rem;
+            border-radius: 24px;
+            max-width: 400px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 25px 50px -12px rgba(109, 40, 217, 0.25);
+            transform: translateY(30px) scale(0.95);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .modal-overlay.active .modal-content {
+            transform: translateY(0) scale(1);
+        }
+        .modal-icon {
+            width: 70px; height: 70px;
+            background: linear-gradient(135deg, var(--color-primary-light), var(--color-primary));
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 1.5rem auto;
+            color: white;
+            box-shadow: 0 10px 20px -5px var(--color-primary);
+        }
+        .modal-icon svg { width: 35px; height: 35px; }
+        .modal-content h3 {
+            font-size: 1.5rem; color: var(--color-text); margin-bottom: 1rem;
+        }
+        .modal-content p {
+            font-size: 1rem; color: var(--color-text-muted); margin-bottom: 2rem; line-height: 1.5;
+        }
+        .btn-close-modal {
+            width: 100%; padding: 0.8rem; border-radius: 50px;
+            background: var(--color-bg); color: var(--color-text);
+            border: 2px solid rgba(100, 116, 139, 0.3);
+            font-weight: 600; font-size: 1rem; cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .btn-close-modal:hover {
+            background: rgba(100, 116, 139, 0.1);
+        }
+
     </style>
 </head>
 <body>
@@ -272,11 +328,72 @@
         <a href="index.html" class="btn-back">← Retour à l'accueil</a>
     </div>
 
+    
+    <!-- Premium Modal -->
+    <div class="modal-overlay" id="successModal">
+        <div class="modal-content">
+            <div class="modal-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+            </div>
+            <h3>Merci pour votre temps et intérêt pour notre projet !</h3>
+            <p>Votre inscription à la liste d'attente a bien été prise en compte. Nous vous contacterons dès le lancement officiel de DJANGOU.</p>
+            <button class="btn-close-modal" onclick="closeModal()">Fermer</button>
+        </div>
+    </div>
+
     <script>
         // Date cible : 21 Septembre 2026 à 00:00:00
         const targetDate = new Date('2026-09-21T00:00:00').getTime();
         const targetUrl = 'https://djangou.site/';
         let isRedirecting = false;
+
+        // Formspree AJAX Submission
+        const waitlistForm = document.querySelector('.waitlist-form');
+        const successModal = document.getElementById('successModal');
+        const submitBtn = waitlistForm ? waitlistForm.querySelector('.btn-submit') : null;
+
+        if (waitlistForm && submitBtn) {
+            waitlistForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                const originalBtnText = submitBtn.innerText;
+                submitBtn.innerText = 'Envoi en cours...';
+                submitBtn.style.opacity = '0.7';
+                submitBtn.disabled = true;
+
+                const data = new FormData(waitlistForm);
+                try {
+                    const response = await fetch(waitlistForm.action, {
+                        method: 'POST',
+                        body: data,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+                    
+                    if (response.ok) {
+                        waitlistForm.reset();
+                        successModal.classList.add('active');
+                    } else {
+                        alert("Une erreur s'est produite. Veuillez réessayer.");
+                    }
+                } catch (error) {
+                    alert("Erreur de connexion. Veuillez vérifier votre internet.");
+                } finally {
+                    submitBtn.innerText = originalBtnText;
+                    submitBtn.style.opacity = '1';
+                    submitBtn.disabled = false;
+                }
+            });
+        }
+
+        function closeModal() {
+            successModal.classList.remove('active');
+        }
+
 
         function updateCountdown() {
             if (isRedirecting) return;
