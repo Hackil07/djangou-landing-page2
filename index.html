@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
 <head>
-    <meta name="google-site-verification" content="fEEwUqUjOoNnUKWbmQTTUYOd4L2ulhwOS3p6o794AdU" />
+    <script src="theme.js"></script>
+    <meta name="google-site-verification" content="c0JmpZgzUUc4oJKbf0SZcl4fBHhRUcdvWuI4FVmokfQ" />
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
@@ -27,6 +28,15 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "DJANGOU",
+      "url": "https://djangou-landing-page2.vercel.app/",
+      "logo": "https://djangou-landing-page2.vercel.app/logo.jpg"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
       "@type": "SoftwareApplication",
       "name": "DJANGOU",
       "applicationCategory": "EducationalApplication",
@@ -42,7 +52,7 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Qu'est-ce que DJANGOU ?",
+          "name": "<span data-i18n="idx.faq.1.q">Qu'est-ce que DJANGOU ?</span>",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "DJANGOU est une plateforme de gestion scolaire conçue pour aider les enseignants, directeurs et personnels administratifs à gérer plus rapidement les élèves, notes, évaluations, moyennes et bulletins."
@@ -50,7 +60,7 @@
         },
         {
           "@type": "Question",
-          "name": "DJANGOU fonctionne-t-il sans Internet ?",
+          "name": "<span data-i18n="idx.faq.2.q">DJANGOU fonctionne-t-il sans Internet ?</span>",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Oui, DJANGOU adopte une approche Offline-First. Vous pouvez continuer à travailler et saisir des notes même lorsque la connexion est instable. La synchronisation reprend automatiquement en arrière-plan lorsque la connexion est rétablie."
@@ -58,7 +68,7 @@
         },
         {
           "@type": "Question",
-          "name": "Comment fonctionne la saisie vocale ?",
+          "name": "<span data-i18n="idx.faq.3.q">Comment fonctionne la saisie vocale ?</span>",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "L'enseignant peut utiliser sa voix pour dicter des notes (par exemple 'Martin, 15 sur 20'). L'intelligence artificielle analyse la dictée et l'intègre directement sous forme de données exploitables dans le relevé de notes."
@@ -66,7 +76,7 @@
         },
         {
           "@type": "Question",
-          "name": "Comment fonctionne le scan par IA ?",
+          "name": "<span data-i18n="idx.faq.4.q">Comment fonctionne le scan par IA ?</span>",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Il est possible de photographier certains documents compatibles. L'IA extrait automatiquement les informations pertinentes pour réduire la saisie manuelle et accélérer le traitement."
@@ -74,7 +84,7 @@
         },
         {
           "@type": "Question",
-          "name": "DJANGOU peut-il générer des bulletins ?",
+          "name": "<span data-i18n="idx.faq.5.q">DJANGOU peut-il générer des bulletins ?</span>",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Oui. DJANGOU automatise la création des bulletins scolaires au format PDF ainsi que la génération des procès-verbaux au format Excel, offrant un gain de temps majeur à l'administration."
@@ -82,7 +92,7 @@
         },
         {
           "@type": "Question",
-          "name": "Peut-on utiliser DJANGOU sur téléphone ?",
+          "name": "<span data-i18n="idx.faq.6.q">Peut-on utiliser DJANGOU sur téléphone ?</span>",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Absolument. L'interface est optimisée pour les smartphones, même d'entrée de gamme, permettant aux enseignants de gérer leurs classes depuis n'importe quel appareil."
@@ -98,7 +108,7 @@
         },
         {
           "@type": "Question",
-          "name": "Comment commencer avec DJANGOU ?",
+          "name": "<span data-i18n="idx.faq.8.q">Comment commencer avec DJANGOU ?</span>",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Il vous suffit de cliquer sur 'Découvrir DJANGOU' ou de vous rendre sur djangou.site pour créer votre compte et commencer à paramétrer votre établissement."
@@ -107,1353 +117,7 @@
       ]
     }
     </script>
-    <style>
-        :root {
-            --color-primary: #6d28d9;
-            --color-primary-light: #8b5cf6;
-            --color-primary-dark: #5b21b6;
-            --color-bg-body: #ffffff;
-            --color-bg-alt: #f8fafc;
-            --color-bg-card: #ffffff;
-            --color-text-main: #0f172a;
-            --color-text-muted: #475569;
-            --color-border: #e2e8f0;
-            --color-success: #10b981;
-            
-            --radius-sm: 0.375rem;
-            --radius-md: 0.75rem;
-            --radius-lg: 1.25rem;
-            --radius-full: 9999px;
-            
-            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.08), 0 2px 4px -2px rgb(0 0 0 / 0.04);
-            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.04);
-            
-            --container-max: 1200px;
-            --spacing-section: 6rem;
-            
-            --font-main: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            
-            --transition-fast: 150ms ease-in-out;
-            --transition-normal: 250ms ease-in-out;
-        }
-
-        [data-theme="dark"] {
-            --color-bg-body: #0f172a;
-            --color-bg-alt: #1e293b;
-            --color-bg-card: #1e293b;
-            --color-text-main: #f8fafc;
-            --color-text-muted: #cbd5e1;
-            --color-border: #334155;
-            
-            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.5);
-            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.5), 0 2px 4px -2px rgb(0 0 0 / 0.5);
-            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.5), 0 4px 6px -4px rgb(0 0 0 / 0.5);
-        }
-
-        [data-theme="dark"] .site-header {
-            background-color: rgba(15, 23, 42, 0.9);
-        }
-        
-        [data-theme="dark"] .mockup-body {
-            background: linear-gradient(to bottom, #161e2e 0%, #1e293b 100%);
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            :root {
-                --transition-fast: 0s;
-                --transition-normal: 0s;
-            }
-            * {
-                animation: none !important;
-                scroll-behavior: auto !important;
-            }
-        }
-
-        *, *::before, *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html {
-            font-size: 16px;
-            scroll-behavior: smooth;
-            -webkit-text-size-adjust: 100%;
-        }
-
-        body {
-            font-family: var(--font-main);
-            color: var(--color-text-main);
-            background-color: var(--color-bg-body);
-            line-height: 1.5;
-            -webkit-font-smoothing: antialiased;
-            overflow-x: hidden;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-            transition: color var(--transition-fast);
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        button {
-            font-family: inherit;
-            border: none;
-            background: none;
-            cursor: pointer;
-        }
-
-        img, svg {
-            display: block;
-            max-width: 100%;
-            height: auto;
-        }
-
-        .container {
-            width: 100%;
-            max-width: var(--container-max);
-            margin: 0 auto;
-            padding: 0 1.5rem;
-        }
-
-        /* Typography */
-        h1, h2, h3, h4 {
-            line-height: 1.2;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-        }
-
-        .text-gradient {
-            background: linear-gradient(135deg, var(--color-primary), #6366f1);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            color: var(--color-primary);
-        }
-
-        .eyebrow {
-            display: inline-block;
-            font-size: 0.875rem;
-            font-weight: 600;
-            color: var(--color-primary);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: 1rem;
-            background-color: rgba(37, 99, 235, 0.1);
-            padding: 0.25rem 0.75rem;
-            border-radius: var(--radius-full);
-        }
-
-        /* Buttons */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0.75rem 1.5rem;
-            font-weight: 600;
-            border-radius: var(--radius-md);
-            transition: all var(--transition-fast);
-            text-align: center;
-        }
-
-        .btn-primary {
-            background-color: var(--color-primary);
-            color: #ffffff;
-            box-shadow: var(--shadow-md);
-        }
-
-        .btn-primary:hover, .btn-primary:focus-visible {
-            background-color: var(--color-primary-dark);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px -5px rgba(109, 40, 217, 0.4);
-        }
-
-        .btn-secondary {
-            background-color: var(--color-bg-alt);
-            color: var(--color-text-main);
-            border: 1px solid var(--color-border);
-        }
-
-        .btn-secondary:hover, .btn-secondary:focus-visible {
-            background-color: var(--color-border);
-            border-color: #cbd5e1;
-        }
-        
-        .btn:focus-visible {
-            outline: 2px solid var(--color-primary);
-            outline-offset: 2px;
-        }
-
-        /* Header */
-        .site-header {
-            position: sticky;
-            top: 0;
-            z-index: 50;
-            background-color: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            border-bottom: 1px solid var(--color-border);
-        }
-
-        .header-inner {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 4rem;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--color-text-main);
-            letter-spacing: -0.05em;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .logo svg {
-            width: 28px;
-            height: 28px;
-            color: var(--color-primary);
-        }
-
-        .main-nav {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 1.5rem;
-        }
-
-        .nav-links a {
-            font-size: 0.9375rem;
-            font-weight: 500;
-            color: var(--color-text-muted);
-        }
-
-        .nav-links a:hover, .nav-links a:focus-visible {
-            color: var(--color-text-main);
-        }
-
-        .menu-toggle {
-            display: none;
-            padding: 0.5rem;
-            color: var(--color-text-main);
-        }
-
-        /* Sections Common */
-        section {
-            padding: var(--spacing-section) 0;
-        }
-
-        section.bg-alt {
-            background-color: var(--color-bg-alt);
-        }
-        
-        .section-header {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto 3rem;
-        }
-
-        .section-header h2 {
-            font-size: 2.25rem;
-            margin-bottom: 1rem;
-        }
-
-        .section-header p {
-            font-size: 1.125rem;
-            color: var(--color-text-muted);
-        }
-
-        /* Hero */
-        .hero {
-            padding: 6rem 0 8rem;
-            text-align: center;
-            background: radial-gradient(circle at 50% -20%, rgba(37, 99, 235, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
-        }
-
-        .hero h1 {
-            font-size: clamp(2.5rem, 5vw, 4.5rem);
-            max-width: 900px;
-            margin: 0 auto 1.5rem;
-        }
-
-        .hero p {
-            font-size: clamp(1.125rem, 2vw, 1.25rem);
-            color: var(--color-text-muted);
-            max-width: 700px;
-            margin: 0 auto 2.5rem;
-        }
-
-        .hero-actions {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-        
-        /* ===== Brain 3D visual ===== */
-        .hero-visual { position: relative; }
-
-        .brain-stage {
-            position: relative;
-            width: 100%;
-            max-width: 460px;
-            margin: 0 auto;
-            aspect-ratio: 1 / 1;
-        }
-
-        .brain-glow {
-            position: absolute;
-            inset: -18%;
-            border-radius: 50%;
-            background:
-                radial-gradient(circle at 48% 40%, rgba(109, 40, 217, 0.30) 0%, rgba(109, 40, 217, 0) 60%),
-                radial-gradient(circle at 62% 62%, rgba(99, 102, 241, 0.22) 0%, rgba(99, 102, 241, 0) 55%);
-            animation: brainPulse 4.5s ease-in-out infinite;
-        }
-
-        @keyframes brainPulse {
-            0%, 100% { opacity: 0.7; transform: scale(1); }
-            50% { opacity: 1; transform: scale(1.06); }
-        }
-
-        /* Visible by default (no-JS fallback); canvas fades in on top once the engine starts */
-        .brain-fallback {
-            position: absolute;
-            inset: 16%;
-            border-radius: 50%;
-            background: radial-gradient(circle at 35% 30%, rgba(167, 139, 250, 0.55), rgba(109, 40, 217, 0.12) 65%, transparent 75%);
-        }
-
-        .brain-canvas {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            display: block;
-            opacity: 0;
-            transition: opacity 0.8s ease-out;
-        }
-
-        .brain-stage.in-view .brain-canvas {
-            opacity: 1;
-        }
-
-        .floating-chip {
-            position: absolute;
-            display: flex;
-            align-items: center;
-            gap: 0.6rem;
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid var(--color-border);
-            border-radius: var(--radius-full);
-            padding: 0.55rem 1.1rem 0.55rem 0.55rem;
-            box-shadow: var(--shadow-lg);
-            font-size: 0.8125rem;
-            font-weight: 600;
-            color: var(--color-text-main);
-            white-space: nowrap;
-            opacity: 0;
-            transition: opacity 0.9s ease-out;
-            animation: chipFloat 5s ease-in-out infinite;
-        }
-
-        .brain-stage.in-view .chip-1 { opacity: 1; transition-delay: 0.9s; }
-        .brain-stage.in-view .chip-2 { opacity: 1; transition-delay: 1.15s; }
-
-        .chip-icon {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 1.75rem;
-            height: 1.75rem;
-            border-radius: 50%;
-            background: var(--color-primary);
-            color: white;
-            flex-shrink: 0;
-        }
-
-        .chip-icon svg { width: 1rem; height: 1rem; }
-
-        .chip-1 { top: 6%; right: -2%; animation-delay: 0s; }
-        .chip-2 { bottom: 8%; left: -4%; animation-delay: 1.4s; }
-
-        @keyframes chipFloat {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-
-        [data-theme="dark"] .floating-chip {
-            background: rgba(30, 41, 59, 0.85);
-        }
-
-        @media (max-width: 960px) {
-            .brain-stage { max-width: 340px; }
-            .chip-1 { right: 2%; }
-            .chip-2 { left: 0%; }
-        }
-
-        @media (max-width: 640px) {
-            .brain-stage { max-width: 240px; }
-            .floating-chip { display: none; }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            .brain-canvas, .floating-chip {
-                opacity: 1 !important;
-                transform: none !important;
-                transition: none !important;
-            }
-        }
-
-        /* Features Grid */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        .feature-card {
-            background-color: var(--color-bg-card);
-            border: 1px solid var(--color-border);
-            border-radius: var(--radius-lg);
-            padding: 2rem;
-            transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
-            transform-style: preserve-3d;
-            perspective: 1000px;
-            will-change: transform;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px); /* Fallback si pas de JS */
-            box-shadow: 0 15px 30px -5px rgba(109, 40, 217, 0.15);
-            border-color: var(--color-primary-light);
-        }
-
-        .feature-icon {
-            width: 3rem;
-            height: 3rem;
-            background-color: rgba(109, 40, 217, 0.1);
-            color: var(--color-primary);
-            border-radius: var(--radius-md);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-            transform: translateZ(30px);
-            transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-        }
-
-        .feature-card:hover .feature-icon {
-            transform: translateZ(50px) scale(1.1);
-            background-color: var(--color-primary);
-            color: white;
-            box-shadow: 0 10px 20px -5px rgba(109, 40, 217, 0.3);
-        }
-
-        .feature-icon svg {
-            width: 1.5rem;
-            height: 1.5rem;
-        }
-
-        .feature-card p {
-            color: var(--color-text-muted);
-            font-size: 0.9375rem;
-            max-height: 0;
-            opacity: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease, opacity 0.4s ease, margin-top 0.4s ease;
-        }
-
-        .feature-card:hover p {
-            max-height: 150px; /* Sufisant pour le texte */
-            opacity: 1;
-            margin-top: 1rem;
-        }
-
-        .feature-card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 0;
-            transition: margin-bottom 0.4s ease;
-        }
-
-        /* Action Demo (Dictée) */
-        .demo-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-        
-        @media (max-width: 900px) {
-            .demo-section {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            .demo-section .demo-content {
-                order: 1;
-            }
-            .demo-section .demo-visual {
-                order: 2;
-            }
-        }
-
-        .demo-visual {
-            background-color: var(--color-bg-card);
-            border: 1px solid var(--color-border);
-            border-radius: var(--radius-lg);
-            padding: 2rem;
-            box-shadow: var(--shadow-md);
-            position: relative;
-        }
-
-        .voice-bubble {
-            background-color: var(--color-primary);
-            color: white;
-            padding: 1rem 1.5rem;
-            border-radius: var(--radius-full);
-            display: inline-flex;
-            align-items: center;
-            gap: 0.75rem;
-            font-weight: 500;
-            margin-bottom: 1.5rem;
-            animation: pulse-soft 2s infinite;
-        }
-        
-        @keyframes pulse-soft {
-            0% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4); }
-            70% { box-shadow: 0 0 0 10px rgba(37, 99, 235, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); }
-        }
-
-        .data-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        .data-table th, .data-table td {
-            padding: 0.75rem 1rem;
-            text-align: left;
-            border-bottom: 1px solid var(--color-border);
-        }
-
-        .data-table th {
-            color: var(--color-text-muted);
-            font-size: 0.875rem;
-            font-weight: 600;
-        }
-
-        .highlight-row {
-            background-color: rgba(16, 185, 129, 0.1);
-        }
-        
-        .highlight-text {
-            color: var(--color-success);
-            font-weight: 700;
-        }
-
-        /* Offline Flow */
-        .offline-flow {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            margin-top: 3rem;
-        }
-        
-        .flow-step {
-            flex: 1;
-            min-width: 200px;
-            text-align: center;
-            padding: 1.5rem;
-            background: var(--color-bg-body);
-            border: 1px solid var(--color-border);
-            border-radius: var(--radius-md);
-        }
-
-        .flow-step svg {
-            width: 2.5rem;
-            height: 2.5rem;
-            color: var(--color-primary);
-            margin: 0 auto 1rem;
-        }
-
-        .flow-arrow {
-            color: var(--color-text-muted);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        @media (max-width: 768px) {
-            .flow-arrow {
-                transform: rotate(90deg);
-                width: 100%;
-                margin: 0.5rem 0;
-            }
-        }
-
-        /* FAQ */
-        .faq-list {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .faq-item {
-            border-bottom: 1px solid var(--color-border);
-        }
-
-        .faq-question {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 1.5rem 0;
-            font-size: 1.125rem;
-            font-weight: 600;
-            color: var(--color-text-main);
-            text-align: left;
-        }
-
-        .faq-question svg {
-            width: 1.25rem;
-            height: 1.25rem;
-            transition: transform var(--transition-fast);
-            color: var(--color-text-muted);
-            flex-shrink: 0;
-        }
-
-        .faq-question[aria-expanded="true"] svg {
-            transform: rotate(180deg);
-        }
-
-        .faq-answer {
-            padding-bottom: 1.5rem;
-            color: var(--color-text-muted);
-            line-height: 1.6;
-        }
-        
-        .faq-answer[hidden] {
-            display: none;
-        }
-
-        /* CTA Section */
-        .cta-section {
-            background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary));
-            color: white;
-            text-align: center;
-            padding: 5rem 1.5rem;
-            border-radius: var(--radius-lg);
-            margin: 2rem auto;
-            max-width: calc(var(--container-max) - 3rem);
-        }
-
-        .cta-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: white;
-        }
-        
-        .cta-section p {
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-
-        .btn-white {
-            background-color: white;
-            color: var(--color-primary-dark);
-        }
-        
-        .btn-white:hover {
-            background-color: var(--color-bg-alt);
-            color: var(--color-primary);
-        }
-
-        /* Footer */
-        .site-footer {
-            background-color: #0f172a;
-            color: #94a3b8;
-            padding: 4rem 0 2rem;
-            margin-top: 4rem;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 3rem;
-            margin-bottom: 3rem;
-        }
-
-        @media (max-width: 768px) {
-            .footer-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-        }
-
-        .footer-brand .logo {
-            color: white;
-            margin-bottom: 1rem;
-        }
-
-        .footer-heading {
-            color: white;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            font-size: 1rem;
-        }
-
-        .footer-links {
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-        }
-
-        .footer-links a:hover {
-            color: white;
-        }
-
-        .footer-bottom {
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 2rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 1rem;
-            font-size: 0.875rem;
-        }
-
-        /* Dark Theme */
-        [data-theme='dark'] {
-            --color-bg-body: #0f172a;
-            --color-bg-card: #1e293b;
-            --color-bg-alt: #161e2e;
-            --color-text-main: #f8fafc;
-            --color-text-muted: #94a3b8;
-            --color-border: #334155;
-        }
-
-        /* Mobile Adjustments */
-        @media (max-width: 768px) {
-            .header-inner .nav-links {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: var(--color-bg-card);
-                flex-direction: column;
-                padding: 1.5rem;
-                gap: 1.5rem;
-                border-bottom: 1px solid var(--color-border);
-                box-shadow: var(--shadow-md);
-                z-index: 50;
-            }
-
-            .header-inner .nav-links.is-open {
-                display: flex;
-            }
-
-            .header-inner .btn {
-                display: none;
-            }
-            
-            .header-inner .nav-links .btn {
-                display: inline-flex;
-                width: 100%;
-            }
-
-            .menu-toggle {
-                display: block;
-            }
-            
-            .section-header h2 {
-                font-size: 1.75rem;
-            }
-            
-            .cta-section {
-                border-radius: 0;
-                max-width: 100%;
-            }
-        }
-        /* Accessibilité : Skip to content */
-        .skip-to-content {
-            position: absolute;
-            top: -50px;
-            left: 0;
-            background: var(--color-primary);
-            color: white;
-            padding: 8px 16px;
-            z-index: 100;
-            transition: top 0.3s;
-        }
-        .skip-to-content:focus {
-            top: 0;
-        }
-
-        /* Scroll Reveal Animations */
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        /* Délais (stagger effect) */
-        .features-grid .feature-card:nth-child(2) { transition-delay: 0.1s; }
-        .features-grid .feature-card:nth-child(3) { transition-delay: 0.2s; }
-        .features-grid .feature-card:nth-child(4) { transition-delay: 0.3s; }
-        .features-grid .feature-card:nth-child(5) { transition-delay: 0.4s; }
-        .features-grid .feature-card:nth-child(6) { transition-delay: 0.5s; }
-
-        @media (prefers-reduced-motion: reduce) {
-            .reveal {
-                opacity: 1 !important;
-                transform: translateY(0) !important;
-                transition: none !important;
-            }
-        }
-
-        /* ── Contact Section ───────────────────────────────────────────── */
-        .contact-wrapper {
-            display: grid;
-            grid-template-columns: 1fr 1.6fr;
-            gap: 3rem;
-            align-items: start;
-            margin-top: 3rem;
-        }
-        @media (max-width: 900px) {
-            .contact-wrapper { grid-template-columns: 1fr; }
-        }
-
-        /* Info bloc gauche */
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-        .contact-info-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-        }
-        .contact-info-item h4 {
-            font-size: 0.875rem;
-            font-weight: 700;
-            margin-bottom: 0.2rem;
-            color: var(--color-text-main);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-        .contact-info-item p {
-            font-size: 0.95rem;
-            color: var(--color-text-muted);
-            margin: 0;
-        }
-        .contact-icon-wrap {
-            flex-shrink: 0;
-            width: 44px;
-            height: 44px;
-            border-radius: var(--radius-md);
-            background: linear-gradient(135deg, rgba(109,40,217,0.12), rgba(139,92,246,0.06));
-            border: 1px solid rgba(109,40,217,0.15);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--color-primary);
-            transition: transform var(--transition-normal);
-        }
-        .contact-icon-wrap:hover { transform: scale(1.08); }
-        .contact-icon-wrap svg { width: 20px; height: 20px; }
-
-        .contact-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: rgba(16,185,129,0.1);
-            color: var(--color-success);
-            border: 1px solid rgba(16,185,129,0.25);
-            border-radius: var(--radius-full);
-            padding: 0.5rem 1rem;
-            font-size: 0.875rem;
-            font-weight: 600;
-            margin-top: 0.5rem;
-        }
-
-        /* Formulaire */
-        .contact-form {
-            background: var(--color-bg-card);
-            border: 1px solid var(--color-border);
-            border-radius: var(--radius-lg);
-            padding: 2.5rem;
-            box-shadow: var(--shadow-lg);
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-            transition: box-shadow var(--transition-normal);
-        }
-        .contact-form:focus-within {
-            box-shadow: 0 20px 40px -10px rgba(109,40,217,0.12);
-        }
-
-        .form-group {
-            display: flex;
-            flex-direction: column;
-            gap: 0.4rem;
-        }
-        .form-group label {
-            font-size: 0.875rem;
-            font-weight: 600;
-            color: var(--color-text-main);
-        }
-        .form-group label span {
-            color: var(--color-primary);
-        }
-
-        .input-wrap {
-            position: relative;
-        }
-        .input-icon {
-            position: absolute;
-            left: 0.875rem;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 18px;
-            height: 18px;
-            color: var(--color-text-muted);
-            pointer-events: none;
-            transition: color var(--transition-fast);
-        }
-        .input-wrap textarea ~ .input-icon,
-        .input-wrap textarea + svg { top: 1rem; transform: none; }
-
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            padding: 0.75rem 1rem 0.75rem 2.75rem;
-            background: var(--color-bg-body);
-            border: 1.5px solid var(--color-border);
-            border-radius: var(--radius-md);
-            color: var(--color-text-main);
-            font-family: var(--font-main);
-            font-size: 0.95rem;
-            outline: none;
-            transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
-            box-sizing: border-box;
-        }
-        .contact-form textarea {
-            resize: vertical;
-            min-height: 130px;
-        }
-        .contact-form input:focus,
-        .contact-form textarea:focus {
-            border-color: var(--color-primary);
-            box-shadow: 0 0 0 3px rgba(109,40,217,0.12);
-        }
-        .contact-form input:focus ~ .input-icon,
-        .contact-form textarea:focus ~ .input-icon { color: var(--color-primary); }
-        .contact-form input::placeholder,
-        .contact-form textarea::placeholder { color: var(--color-text-muted); opacity: 0.7; }
-
-        /* États validation */
-        .form-group.is-valid input,
-        .form-group.is-valid textarea {
-            border-color: var(--color-success);
-        }
-        .form-group.has-error input,
-        .form-group.has-error textarea {
-            border-color: #ef4444;
-            box-shadow: 0 0 0 3px rgba(239,68,68,0.1);
-        }
-
-        .field-error {
-            font-size: 0.8rem;
-            color: #ef4444;
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-            gap: 0.3rem;
-            animation: slideDown 0.2s ease;
-        }
-        .form-group.is-valid .field-error,
-        .field-error[hidden] { display: none; }
-
-        @keyframes slideDown {
-            from { opacity: 0; transform: translateY(-6px); }
-            to   { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Bouton submit */
-        .contact-submit {
-            width: 100%;
-            justify-content: center;
-            gap: 0.6rem;
-            position: relative;
-            overflow: hidden;
-        }
-        .btn-send-icon { width: 18px; height: 18px; transition: transform var(--transition-fast); }
-        .contact-submit:hover .btn-send-icon { transform: translate(3px, -3px); }
-        .btn-loader {
-            display: none;
-            width: 18px;
-            height: 18px;
-            border: 2px solid rgba(255,255,255,0.3);
-            border-top-color: white;
-            border-radius: 50%;
-            animation: spin 0.7s linear infinite;
-        }
-        @keyframes spin { to { transform: rotate(360deg); } }
-        .contact-submit.is-loading .btn-text { opacity: 0.5; }
-        .contact-submit.is-loading .btn-loader { display: block; }
-        .contact-submit.is-loading .btn-send-icon { display: none; }
-
-        /* Messages succès / erreur */
-        .form-success,
-        .form-error-global {
-            display: flex;
-            align-items: flex-start;
-            gap: 0.75rem;
-            padding: 1rem 1.25rem;
-            border-radius: var(--radius-md);
-            font-size: 0.9rem;
-            font-weight: 500;
-            animation: slideDown 0.3s ease;
-        }
-        .form-success[hidden], .form-error-global[hidden] { display: none; }
-        .form-success {
-            background: rgba(16,185,129,0.1);
-            border: 1px solid rgba(16,185,129,0.3);
-            color: #059669;
-        }
-        .form-error-global {
-            background: rgba(239,68,68,0.08);
-            border: 1px solid rgba(239,68,68,0.25);
-            color: #dc2626;
-        }
-        .form-success svg, .form-error-global svg {
-            width: 20px; height: 20px;
-            flex-shrink: 0;
-            margin-top: 1px;
-        }
-        /* ── Fin Contact Section ────────────────────────────────────────── */
-
-        /* ── Typewriter ─────────────────────────────────────────────────── */
-        .typewriter-cursor {
-            display: inline-block;
-            color: var(--color-primary);
-            animation: blink 0.8s step-end infinite;
-            font-weight: 300;
-            margin-left: 2px;
-        }
-        @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
-        .typewriter-text .text-gradient {
-            background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        /* ── Logo hover ─────────────────────────────────────────────────── */
-        .logo div {
-            transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.3s ease;
-        }
-        .logo:hover div {
-            transform: rotate(-5deg) scale(1.08);
-            box-shadow: 0 8px 24px rgba(109,40,217,0.25);
-        }
-
-        /* ── Badges langues ─────────────────────────────────────────────── */
-        .lang-badges {
-            display: flex;
-            gap: 0.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 1rem;
-        }
-        .lang-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.35rem;
-            background: rgba(109,40,217,0.08);
-            color: var(--color-primary);
-            border: 1px solid rgba(109,40,217,0.2);
-            border-radius: var(--radius-full);
-            padding: 0.3rem 0.8rem;
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
-
-        /* ── Illustration WiFi animée ───────────────────────────────────── */
-        .wifi-illustration {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 3rem;
-            padding: 2rem 0 3rem;
-            flex-wrap: wrap;
-            position: relative;
-        }
-        .wifi-labels {
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            width: 100%;
-            max-width: 340px;
-            justify-content: space-between;
-            font-size: 0.8rem;
-            font-weight: 600;
-            color: var(--color-text-muted);
-        }
-        .wifi-icon {
-            position: relative;
-            width: 80px;
-            height: 60px;
-            display: flex;
-            align-items: flex-end;
-            justify-content: center;
-        }
-        .wifi-dot {
-            width: 10px; height: 10px;
-            border-radius: 50%;
-            position: absolute;
-            bottom: 0; left: 50%;
-            transform: translateX(-50%);
-        }
-        .wifi-ring {
-            position: absolute;
-            border-radius: 50%;
-            border: 3px solid transparent;
-            border-top-color: transparent;
-            border-bottom: none;
-        }
-        .wifi-ring.r1 { width:20px; height:20px; bottom:10px; left:50%; transform:translateX(-50%); }
-        .wifi-ring.r2 { width:40px; height:40px; bottom:10px; left:50%; transform:translateX(-50%); }
-        .wifi-ring.r3 { width:60px; height:60px; bottom:10px; left:50%; transform:translateX(-50%); }
-
-        .wifi-offline .wifi-dot { background: #ef4444; }
-        .wifi-offline .wifi-ring { border-color: #ef4444; opacity: 0.3; }
-        .wifi-slash {
-            position: absolute;
-            top: -2px; right: -2px;
-            width: 3px; height: 70px;
-            background: #ef4444;
-            border-radius: 2px;
-            transform: rotate(45deg);
-            transform-origin: top;
-        }
-
-        .wifi-online .wifi-dot { background: var(--color-success); }
-        .wifi-online .wifi-ring.r1 { border-color: var(--color-success); animation: wifiPulse 1.2s ease-in-out infinite; }
-        .wifi-online .wifi-ring.r2 { border-color: var(--color-success); animation: wifiPulse 1.2s ease-in-out 0.2s infinite; }
-        .wifi-online .wifi-ring.r3 { border-color: var(--color-success); animation: wifiPulse 1.2s ease-in-out 0.4s infinite; }
-        @keyframes wifiPulse { 0%,100%{opacity:0.25} 50%{opacity:1} }
-
-        .wifi-arrow {
-            font-size: 2rem;
-            color: var(--color-primary);
-            animation: arrowBounce 1.5s ease-in-out infinite;
-        }
-        @keyframes arrowBounce { 0%,100%{transform:translateX(0)} 50%{transform:translateX(6px)} }
-
-        /* ── Compteurs animés ───────────────────────────────────────────── */
-        .stats-section {
-            background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
-            padding: var(--spacing-section) 0;
-        }
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-            gap: 2rem;
-            text-align: center;
-        }
-        .stat-item { padding: 1rem; }
-        .stat-number {
-            font-size: clamp(2.5rem, 6vw, 4rem);
-            font-weight: 800;
-            color: white;
-            line-height: 1;
-            letter-spacing: -0.03em;
-        }
-        .stat-label {
-            font-size: 0.9rem;
-            color: rgba(255,255,255,0.75);
-            margin-top: 0.5rem;
-            font-weight: 500;
-        }
-
-        /* ── Avant / Après ──────────────────────────────────────────────── */
-        .compare-grid {
-            display: grid;
-            grid-template-columns: 1fr auto 1fr;
-            gap: 1.5rem;
-            align-items: stretch;
-            margin-top: 2.5rem;
-        }
-        @media (max-width: 768px) {
-            .compare-grid { grid-template-columns: 1fr; }
-            .compare-divider { display: none; }
-        }
-        .compare-card {
-            border-radius: var(--radius-lg);
-            padding: 2rem;
-            border: 1.5px solid var(--color-border);
-        }
-        .compare-before {
-            background: rgba(239,68,68,0.04);
-            border-color: rgba(239,68,68,0.2);
-        }
-        .compare-after {
-            background: rgba(16,185,129,0.05);
-            border-color: rgba(16,185,129,0.25);
-        }
-        .compare-label {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-weight: 700;
-            font-size: 1rem;
-            margin-bottom: 1.25rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid var(--color-border);
-        }
-        .compare-before .compare-label { color: #dc2626; }
-        .compare-after  .compare-label { color: #059669; }
-        .compare-list {
-            list-style: none;
-            padding: 0; margin: 0;
-            display: flex; flex-direction: column; gap: 0.75rem;
-        }
-        .compare-list li {
-            display: flex; align-items: flex-start; gap: 0.6rem;
-            font-size: 0.9rem; color: var(--color-text-muted);
-        }
-        .compare-before .compare-list li::before {
-            content: "✕";
-            color: #ef4444; font-weight: 700; flex-shrink: 0;
-        }
-        .compare-after .compare-list li::before {
-            content: "✓";
-            color: #10b981; font-weight: 700; flex-shrink: 0;
-        }
-        .compare-divider {
-            display: flex; align-items: center; justify-content: center;
-        }
-        .compare-arrow {
-            font-size: 2rem; color: var(--color-primary);
-            background: rgba(109,40,217,0.1);
-            border: 1px solid rgba(109,40,217,0.2);
-            border-radius: 50%;
-            width: 48px; height: 48px;
-            display: flex; align-items: center; justify-content: center;
-        }
-
-        /* ── Bannière RGPD ──────────────────────────────────────────────── */
-        .rgpd-banner {
-            position: fixed;
-            bottom: 1.5rem;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 999;
-            background: var(--color-bg-card);
-            border: 1px solid var(--color-border);
-            border-radius: var(--radius-lg);
-            padding: 1rem 1.5rem;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-            max-width: min(600px, calc(100vw - 2rem));
-            width: 100%;
-            animation: slideUp 0.4s cubic-bezier(0.34,1.56,0.64,1);
-        }
-        .rgpd-banner.hidden { display: none; }
-        @keyframes slideUp { from{opacity:0;transform:translateX(-50%) translateY(20px)} to{opacity:1;transform:translateX(-50%) translateY(0)} }
-        .rgpd-text { font-size: 0.85rem; color: var(--color-text-muted); flex: 1; min-width: 200px; }
-        .rgpd-text strong { color: var(--color-text-main); }
-        .rgpd-actions { display: flex; gap: 0.5rem; flex-shrink: 0; }
-        .rgpd-btn {
-            padding: 0.5rem 1rem; border-radius: var(--radius-full);
-            font-size: 0.8rem; font-weight: 600; cursor: pointer; border: none;
-            transition: all var(--transition-fast);
-        }
-        .rgpd-accept { background: var(--color-primary); color: white; }
-        .rgpd-accept:hover { background: var(--color-primary-dark); }
-        .rgpd-decline { background: transparent; color: var(--color-text-muted); border: 1px solid var(--color-border); }
-        .rgpd-decline:hover { color: var(--color-text-main); }
-    
-        .visually-hidden {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border: 0;
-        }
-
-    
-        /* Fix for button text color in nav */
-        .nav-links a.btn-primary,
-        .nav-links a.btn-primary:hover,
-        .nav-links a.btn-primary:focus-visible {
-            color: #ffffff;
-        }
-        
-        [data-theme="dark"] .btn-primary {
-            background-color: var(--color-primary-light);
-            color: #ffffff;
-        }
-        
-        [data-theme="dark"] .btn-primary:hover {
-            background-color: var(--color-primary);
-        }
-
-    
-        .feature-highlight {
-            border: 2px solid var(--color-primary) !important;
-            box-shadow: 0 0 20px rgba(109, 40, 217, 0.2) !important;
-            position: relative;
-            transform: translateY(-5px);
-        }
-        .feature-highlight::before {
-            content: "Nouveau";
-            position: absolute;
-            top: -12px;
-            right: 20px;
-            background: var(--color-primary);
-            color: white;
-            font-size: 0.75rem;
-            font-weight: bold;
-            padding: 4px 10px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(109, 40, 217, 0.3);
-        }
-
-    </style>
+<link rel="stylesheet" href="style.css">
 
 
 
@@ -1514,6 +178,8 @@
 
     </style>
     </noscript>
+<script src="i18n-dictionary.js"></script>
+    <script src="i18n.js"></script>
 </head>
 <body>
     <a href="#main-content" class="skip-to-content">Passer au contenu principal</a>
@@ -1528,19 +194,20 @@
             
             <nav class="main-nav">
                 <div class="nav-links" id="main-menu">
-                    <a href="#fonctionnalites">Fonctionnalités</a>
+                    <a href="#fonctionnalites" data-i18n="idx.nav.feat">Fonctionnalités</a>
                     <a href="#offline">Offline-First</a>
-                    <a href="#ia">Intelligence IA</a>
-                    <a href="#securite">Sécurité</a>
-                    <a href="#faq">FAQ</a>
-                    <a href="#contact">Contact</a>
+                    <a href="#ia" data-i18n="idx.footer.ia">Intelligence IA</a>
+                    <a href="#securite" data-i18n="idx.footer.sec">Sécurité</a>
+                    <a href="#faq" data-i18n="idx.nav.faq">FAQ</a>
+                    <a href="#contact" data-i18n="idx.nav.contact">Contact</a>
                     
                     <div style="display: flex; align-items: center; gap: 1rem;">
-                        <button id="theme-toggle" class="btn" style="padding: 0.5rem; background: transparent; color: var(--color-text-main); border: 1px solid var(--color-border); border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;" aria-label="Basculer le thème">
+                        <select class="lang-selector" style="background: transparent; color: var(--color-text-main); border: 1px solid var(--color-border); border-radius: 4px; padding: 0.2rem; cursor: pointer; font-family: inherit;"><option value="fr">FR</option><option value="en">EN</option></select>
+                        <button id="theme-toggle" class="btn" style="padding: 0.5rem; background: transparent; color: var(--color-text-main); border: 1px solid var(--color-border); border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;" aria-label="Basculer le thème" data-i18n-aria="idx.aria.theme">
                             <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px; display: none;"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
                             <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
                         </button>
-                        <a href="coming-soon.html" class="btn btn-primary">Accéder à DJANGOU</a>
+                        <a href="coming-soon.html" class="btn btn-primary" data-i18n="idx.nav.cta">Accéder à DJANGOU</a>
                     </div>
                 </div>
                 
@@ -1557,15 +224,16 @@
         <!-- HERO -->
         <section class="hero">
             <div class="container">
-                <span class="eyebrow">La plateforme EdTech adaptée à votre réalité</span>
+                <span class="eyebrow" data-i18n="idx.hero.eyebrow">La plateforme EdTech adaptée à votre réalité</span>
                 <h1 id="hero-h1">
-    <span class="visually-hidden">Gérez votre école plus intelligemment, même sans connexion.</span>
+    <span style="display: block; font-size: 1.2em; color: var(--color-primary); margin-bottom: 0.5rem; font-weight: 800;">DJANGOU</span>
+    <span class="visually-hidden" data-i18n="idx.hero.hidden">Logiciel de gestion scolaire intelligent et hors-ligne.</span>
     <span class="typewriter-text" aria-hidden="true"></span><span class="typewriter-cursor" aria-hidden="true">|</span>
 </h1>
-                <p>DJANGOU automatise la saisie des notes, la correction et la génération des bulletins scolaires. Une application performante pensée pour les enseignants et directeurs qui veulent gagner du temps.</p>
+                <p data-i18n="idx.hero.desc">DJANGOU automatise la saisie des notes, la correction et la génération des bulletins scolaires. Une application performante pensée pour les enseignants et directeurs qui veulent gagner du temps.</p>
                 <div class="hero-actions">
-                    <a href="coming-soon.html" class="btn btn-primary">Découvrir DJANGOU</a>
-                    <a href="#fonctionnalites" class="btn btn-secondary">Voir le fonctionnement</a>
+                    <a href="coming-soon.html" class="btn btn-primary" data-i18n="idx.hero.cta1">Découvrir DJANGOU</a>
+                    <a href="#fonctionnalites" class="btn btn-secondary" data-i18n="idx.hero.cta2">Voir le fonctionnement</a>
                 </div>
                 
                 <div class="hero-visual" aria-hidden="true">
@@ -1578,13 +246,13 @@
                             <span class="chip-icon">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l2.8 2.8M16.2 16.2L19 19M5 19l2.8-2.8M16.2 7.8L19 5"></path></svg>
                             </span>
-                            IA en temps réel
+                            <span data-i18n="idx.hero.chip1">IA en temps réel</span>
                         </div>
                         <div class="floating-chip chip-2">
                             <span class="chip-icon">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5a10 10 0 0 1 14 0"></path><path d="M8.5 16a5 5 0 0 1 7 0"></path><line x1="12" y1="19.5" x2="12.01" y2="19.5"></line><line x1="3" y1="3" x2="21" y2="21"></line></svg>
                             </span>
-                            100% Hors-ligne
+                            <span data-i18n="idx.hero.chip2">100% Hors-ligne</span>
                         </div>
                     </div>
                 </div>
@@ -1595,8 +263,8 @@
         <section id="fonctionnalites" class="bg-alt">
             <div class="container">
                 <div class="section-header reveal">
-                    <h2>Moins de saisie manuelle. Plus de temps pour enseigner.</h2>
-                    <p>Découvrez comment nos fonctionnalités repensent le travail administratif scolaire pour éliminer les tâches répétitives et chronophages.</p>
+                    <h2 data-i18n="idx.feat.h2">Moins de saisie manuelle. Plus de temps pour enseigner.</h2>
+                    <p data-i18n="idx.feat.desc">Découvrez comment nos fonctionnalités repensent le travail administratif scolaire pour éliminer les tâches répétitives et chronophages.</p>
                     <div class="lang-badges">
                         <span class="lang-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg> Français</span>
                         <span class="lang-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg> English</span>
@@ -1612,8 +280,8 @@
                                 <circle cx="12" cy="12" r="3"></circle>
                             </svg>
                         </div>
-                        <h3>Offline-First</h3>
-                        <p>Continuez à travailler normalement même lorsque la connexion internet est coupée. Synchronisation automatique au retour du réseau.</p>
+                        <h3 data-i18n="idx.feat.1.h3">Offline-First</h3>
+                        <p data-i18n="idx.feat.1.p">Continuez à travailler normalement même lorsque la connexion internet est coupée. Synchronisation automatique au retour du réseau.</p>
                     </div>
 
                     <!-- Feature 2 -->
@@ -1625,8 +293,8 @@
                                 <line x1="12" y1="19" x2="12" y2="22"></line>
                             </svg>
                         </div>
-                        <h3>Dictée Vocale Intelligente</h3>
-                        <p>Énoncez vos notes à voix haute. L'IA les comprend et remplit automatiquement le tableau des élèves depuis votre téléphone.</p>
+                        <h3 data-i18n="idx.feat.2.h3">Dictée Vocale Intelligente</h3>
+                        <p data-i18n="idx.feat.2.p">Énoncez vos notes à voix haute. L'IA les comprend et remplit automatiquement le tableau des élèves depuis votre téléphone.</p>
                     </div>
 
                     <!-- Feature 3 -->
@@ -1638,8 +306,8 @@
                                 <polyline points="21 15 16 10 5 21"></polyline>
                             </svg>
                         </div>
-                        <h3>Scan et OCR par IA</h3>
-                        <p>Photographiez les documents ou copies compatibles. L'IA extrait automatiquement les informations pour réduire la saisie manuelle.</p>
+                        <h3 data-i18n="idx.feat.3.h3">Scan et OCR par IA</h3>
+                        <p data-i18n="idx.feat.3.p">Photographiez les documents ou copies compatibles. L'IA extrait automatiquement les informations pour réduire la saisie manuelle.</p>
                     </div>
 
                     <!-- Feature 4 -->
@@ -1649,8 +317,8 @@
                                 <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
                             </svg>
                         </div>
-                        <h3>Barèmes Automatisés</h3>
-                        <p>L'IA vous assiste pour structurer des critères de correction, facilitant le calcul automatique et rapide des moyennes globales.</p>
+                        <h3 data-i18n="idx.feat.4.h3">Barèmes Automatisés</h3>
+                        <p data-i18n="idx.feat.4.p">L'IA vous assiste pour structurer des critères de correction, facilitant le calcul automatique et rapide des moyennes globales.</p>
                     </div>
 
                     <!-- Feature 5 -->
@@ -1664,8 +332,8 @@
                                 <polyline points="10 9 9 9 8 9"></polyline>
                             </svg>
                         </div>
-                        <h3>Bulletins PDF en masse</h3>
-                        <p>Générez instantanément des bulletins scolaires professionnels au format PDF pour l'ensemble d'une classe en un seul clic.</p>
+                        <h3 data-i18n="idx.feat.5.h3">Bulletins PDF en masse</h3>
+                        <p data-i18n="idx.feat.5.p">Générez instantanément des bulletins scolaires professionnels au format PDF pour l'ensemble d'une classe en un seul clic.</p>
                     </div>
 
                     <!-- Feature 6 -->
@@ -1677,8 +345,8 @@
                                 <line x1="12" y1="15" x2="12" y2="3"></line>
                             </svg>
                         </div>
-                        <h3>Procès-Verbaux Excel</h3>
-                        <p>Exportez facilement les relevés complets et procès-verbaux au format Excel pour les réunions d'administration.</p>
+                        <h3 data-i18n="idx.feat.6.h3">Procès-Verbaux Excel</h3>
+                        <p data-i18n="idx.feat.6.p">Exportez facilement les relevés complets et procès-verbaux au format Excel pour les réunions d'administration.</p>
                     </div>
                 </div>
             </div>
@@ -1688,17 +356,17 @@
         <section id="ia">
             <div class="container demo-section">
                 <div class="demo-content reveal">
-                    <span class="eyebrow">Intelligence Artificielle</span>
-                    <h2>Dictée vocale : l'IA au service de votre productivité.</h2>
-                    <p>Saisissez vos notes beaucoup plus rapidement, même depuis un smartphone. Activez le micro, énoncez la note de l'élève, et DJANGOU s'occupe de l'associer à la bonne ligne dans votre classeur numérique.</p>
+                    <span class="eyebrow" data-i18n="idx.ia.eyebrow">Intelligence Artificielle</span>
+                    <h2 data-i18n="idx.ia.h2">Dictée vocale : l'IA au service de votre productivité.</h2>
+                    <p data-i18n="idx.ia.desc">Saisissez vos notes beaucoup plus rapidement, même depuis un smartphone. Activez le micro, énoncez la note de l'élève, et DJANGOU s'occupe de l'associer à la bonne ligne dans votre classeur numérique.</p>
                     <ul style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 1rem;">
                         <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
                             <svg style="color: var(--color-success); width: 1.5rem; height: 1.5rem; flex-shrink: 0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <span>Réduit le risque d'erreur de saisie manuelle.</span>
+                            <span data-i18n="idx.ia.li1">Réduit le risque d'erreur de saisie manuelle.</span>
                         </li>
                         <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
                             <svg style="color: var(--color-success); width: 1.5rem; height: 1.5rem; flex-shrink: 0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <span>Extrêmement pratique depuis un écran de smartphone.</span>
+                            <span data-i18n="idx.ia.li2">Extrêmement pratique depuis un écran de smartphone.</span>
                         </li>
                     </ul>
                 </div>
@@ -1709,33 +377,33 @@
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 1.25rem; height: 1.25rem;">
                                 <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
                             </svg>
-                            « Martin, 15 sur 20 »
+                            <span data-i18n="idx.ia.demo.voice">« Martin, 15 sur 20 »</span>
                         </div>
                     </div>
                     
                     <table class="data-table">
                         <thead>
                             <tr>
-                                <th>Élève</th>
-                                <th>Devoir 1</th>
-                                <th>Statut</th>
+                                <th data-i18n="idx.ia.th1">Élève</th>
+                                <th data-i18n="idx.ia.th2">Devoir 1</th>
+                                <th data-i18n="idx.ia.th3">Statut</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>Alice B.</td>
                                 <td>14/20</td>
-                                <td><span style="color: var(--color-text-muted);">Saisi</span></td>
+                                <td><span style="color: var(--color-text-muted);" data-i18n="idx.ia.td.saisi">Saisi</span></td>
                             </tr>
                             <tr class="highlight-row">
                                 <td>Martin L.</td>
                                 <td class="highlight-text">15/20</td>
-                                <td><span class="highlight-text">Ajouté par voix</span></td>
+                                <td><span class="highlight-text" data-i18n="idx.ia.td.voice">Ajouté par voix</span></td>
                             </tr>
                             <tr>
                                 <td>Sophie T.</td>
                                 <td>-</td>
-                                <td><span style="color: var(--color-text-muted);">En attente</span></td>
+                                <td><span style="color: var(--color-text-muted);" data-i18n="idx.ia.td.waiting">En attente</span></td>
                             </tr>
                         </tbody>
                     </table>
@@ -1747,17 +415,17 @@
         <section class="bg-alt" style="padding-top: 0; padding-bottom: 5rem;">
             <div class="container demo-section" style="flex-direction: row-reverse;">
                 <div class="demo-content reveal">
-                    <span class="eyebrow">Vision par Ordinateur</span>
-                    <h2>Scan et OCR : Digitalisez en un clic.</h2>
-                    <p>Photographiez les documents ou copies compatibles. L'IA extrait automatiquement les informations pour réduire la saisie manuelle. Un gain de temps inestimable pour le traitement des fiches papier.</p>
+                    <span class="eyebrow" data-i18n="idx.ocr.eyebrow">Vision par Ordinateur</span>
+                    <h2 data-i18n="idx.ocr.h2">Scan et OCR : Digitalisez en un clic.</h2>
+                    <p data-i18n="idx.ocr.desc">Photographiez les documents ou copies compatibles. L'IA extrait automatiquement les informations pour réduire la saisie manuelle. Un gain de temps inestimable pour le traitement des fiches papier.</p>
                     <ul style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 1rem;">
                         <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
                             <svg style="color: var(--color-success); width: 1.5rem; height: 1.5rem; flex-shrink: 0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <span>Fini la double saisie des listes d'élèves.</span>
+                            <span data-i18n="idx.ocr.li1">Fini la double saisie des listes d'élèves.</span>
                         </li>
                         <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
                             <svg style="color: var(--color-success); width: 1.5rem; height: 1.5rem; flex-shrink: 0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <span>Reconnaissance d'écriture optimisée.</span>
+                            <span data-i18n="idx.ocr.li2">Reconnaissance d'écriture optimisée.</span>
                         </li>
                     </ul>
                 </div>
@@ -1784,7 +452,7 @@
                     <div style="background: var(--color-bg-card); border: 1px solid var(--color-primary); padding: 1rem; border-radius: 8px; box-shadow: 0 10px 15px -3px rgba(109,40,217,0.25); width: 190px; position: absolute; bottom: 0; right: 0; z-index: 3; display: flex; flex-direction: column; gap: 8px;">
                         <div style="display: flex; align-items: center; gap: 6px; color: var(--color-success); font-size: 0.85rem; font-weight: bold;">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            Extraction réussie
+                            <span data-i18n="idx.ocr.success">Extraction réussie</span>
                         </div>
                         <div style="background: var(--color-bg-body); padding: 6px 8px; border-radius: 4px; font-size: 0.8rem; border: 1px solid var(--color-border); display: flex; justify-content: space-between;">
                             <span style="color: var(--color-text-main);">Jean D.</span> <span style="color: var(--color-primary); font-weight: 700;">14</span>
@@ -1812,9 +480,9 @@
         <section id="offline" class="bg-alt">
             <div class="container">
                 <div class="section-header reveal">
-                    <span class="eyebrow">Résilience réseau</span>
-                    <h2>L'approche Offline-First.</h2>
-                    <p>Dans les environnements où la connexion est lente, instable ou coûteuse, DJANGOU garantit la continuité de votre travail. Vos données récentes sont stockées localement.</p>
+                    <span class="eyebrow" data-i18n="idx.off.eyebrow">Résilience réseau</span>
+                    <h2 data-i18n="idx.off.h2">L'approche Offline-First.</h2>
+                    <p data-i18n="idx.off.desc">Dans les environnements où la connexion est lente, instable ou coûteuse, DJANGOU garantit la continuité de votre travail. Vos données récentes sont stockées localement.</p>
                 </div>
 
                 <!-- Illustration WiFi CSS animée -->
@@ -1834,17 +502,17 @@
                         <div class="wifi-dot"></div>
                     </div>
                     <div class="wifi-labels">
-                        <span>Hors-ligne</span>
+                        <span data-i18n="idx.off.badge1">Hors-ligne</span>
                         <span></span>
-                        <span>Reconnecté</span>
+                        <span data-i18n="idx.off.badge2">Reconnecté</span>
                     </div>
                 </div>
                 
                 <div class="offline-flow reveal">
                     <div class="flow-step">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-                        <h4>1. Vous travaillez</h4>
-                        <p style="font-size: 0.875rem; color: var(--color-text-muted); margin-top: 0.5rem;">Vous saisissez les notes normalement.</p>
+                        <h4 data-i18n="idx.off.step1">1. Vous travaillez</h4>
+                        <p style="font-size: 0.875rem; color: var(--color-text-muted); margin-top: 0.5rem;" data-i18n="idx.off.step1_p">Vous saisissez les notes normalement.</p>
                     </div>
                     
                     <div class="flow-arrow">
@@ -1853,8 +521,8 @@
 
                     <div class="flow-step">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path><line x1="22" y1="2" x2="2" y2="22"></line></svg>
-                        <h4>2. Coupure réseau</h4>
-                        <p style="font-size: 0.875rem; color: var(--color-text-muted); margin-top: 0.5rem;">L'application continue de fonctionner.</p>
+                        <h4 data-i18n="idx.off.step2">2. Coupure réseau</h4>
+                        <p style="font-size: 0.875rem; color: var(--color-text-muted); margin-top: 0.5rem;" data-i18n="idx.off.step2_p">L'application continue de fonctionner.</p>
                     </div>
                     
                     <div class="flow-arrow">
@@ -1863,8 +531,8 @@
 
                     <div class="flow-step">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.59-8.27l-5.67-5.67"></path></svg>
-                        <h4>3. Synchronisation</h4>
-                        <p style="font-size: 0.875rem; color: var(--color-text-muted); margin-top: 0.5rem;">Retour en ligne : envoi automatique au serveur.</p>
+                        <h4 data-i18n="idx.off.step3">3. Synchronisation</h4>
+                        <p style="font-size: 0.875rem; color: var(--color-text-muted); margin-top: 0.5rem;" data-i18n="idx.off.step3_p">Retour en ligne : envoi automatique au serveur.</p>
                     </div>
                 </div>
             </div>
@@ -1874,27 +542,27 @@
         <section>
             <div class="container">
                 <div class="section-header reveal">
-                    <h2>Une plateforme, deux usages complémentaires.</h2>
+                    <h2 data-i18n="idx.qui.h2">Une plateforme, deux usages complémentaires.</h2>
                 </div>
                 
                 <div class="reveal" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
                     <div style="padding: 2.5rem; background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);">
                         <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--color-primary-dark);">Pour les enseignants</h3>
-                        <p style="color: var(--color-text-muted); margin-bottom: 1.5rem;">Fini les calculs manuels interminables et la double saisie papier-ordinateur.</p>
+                        <p style="color: var(--color-text-muted); margin-bottom: 1.5rem;" data-i18n="idx.qui.ens.p">Fini les calculs manuels interminables et la double saisie papier-ordinateur.</p>
                         <ul style="display: flex; flex-direction: column; gap: 0.75rem;">
-                            <li style="display: flex; gap: 0.5rem;"><svg width="20" height="20" style="color:var(--color-primary);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Moins de saisie grâce à la voix</li>
-                            <li style="display: flex; gap: 0.5rem;"><svg width="20" height="20" style="color:var(--color-primary);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Calcul automatique des moyennes</li>
-                            <li style="display: flex; gap: 0.5rem;"><svg width="20" height="20" style="color:var(--color-primary);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Travail possible depuis le téléphone</li>
+                            <li style="display: flex; gap: 0.5rem;"><svg width="20" height="20" style="color:var(--color-primary);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> <span data-i18n="idx.qui.ens.l1">Moins de saisie grâce à la voix</span></li>
+                            <li style="display: flex; gap: 0.5rem;"><svg width="20" height="20" style="color:var(--color-primary);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> <span data-i18n="idx.qui.ens.l2">Calcul automatique des moyennes</span></li>
+                            <li style="display: flex; gap: 0.5rem;"><svg width="20" height="20" style="color:var(--color-primary);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> <span data-i18n="idx.qui.ens.l3">Travail possible depuis le téléphone</span></li>
                         </ul>
                     </div>
 
                     <div style="padding: 2.5rem; background: var(--color-bg-alt); border: 1px solid var(--color-border); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);">
                         <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--color-primary-dark);">Pour l'administration</h3>
-                        <p style="color: var(--color-text-muted); margin-bottom: 1.5rem;">Centralisez les données de l'établissement et générez les documents officiels instantanément.</p>
+                        <p style="color: var(--color-text-muted); margin-bottom: 1.5rem;" data-i18n="idx.qui.adm.p">Centralisez les données de l'établissement et générez les documents officiels instantanément.</p>
                         <ul style="display: flex; flex-direction: column; gap: 0.75rem;">
-                            <li style="display: flex; gap: 0.5rem;"><svg width="20" height="20" style="color:var(--color-text-main);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Vue globale sur les classes</li>
-                            <li style="display: flex; gap: 0.5rem;"><svg width="20" height="20" style="color:var(--color-text-main);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Génération de bulletins PDF</li>
-                            <li style="display: flex; gap: 0.5rem;"><svg width="20" height="20" style="color:var(--color-text-main);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Export de Procès-Verbaux Excel</li>
+                            <li style="display: flex; gap: 0.5rem;"><svg width="20" height="20" style="color:var(--color-text-main);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> <span data-i18n="idx.qui.adm.l1">Vue globale sur les classes</span></li>
+                            <li style="display: flex; gap: 0.5rem;"><svg width="20" height="20" style="color:var(--color-text-main);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> <span data-i18n="idx.qui.adm.l2">Génération de bulletins PDF</span></li>
+                            <li style="display: flex; gap: 0.5rem;"><svg width="20" height="20" style="color:var(--color-text-main);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> <span data-i18n="idx.qui.adm.l3">Export de Procès-Verbaux Excel</span></li>
                         </ul>
                     </div>
                 </div>
@@ -1905,25 +573,25 @@
         <section id="securite" class="bg-alt">
             <div class="container">
                 <div class="section-header reveal">
-                    <span class="eyebrow">Sécurité & Confiance</span>
-                    <h2>Une architecture pensée pour la protection de vos données scolaires.</h2>
+                    <span class="eyebrow" data-i18n="idx.sec.eyebrow">Sécurité & Confiance</span>
+                    <h2 data-i18n="idx.sec.h2">Une architecture pensée pour la protection de vos données scolaires.</h2>
                 </div>
                 
                 <div class="reveal" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; max-width: 900px; margin: 0 auto;">
                     <div style="text-align: center;">
                         <svg style="margin: 0 auto 1rem; color: var(--color-primary); width: 2.5rem; height: 2.5rem;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
                         <h3 style="font-size: 1.125rem; margin-bottom: 0.5rem;">Infrastructure Cloudflare</h3>
-                        <p style="color: var(--color-text-muted); font-size: 0.9375rem;">Protection active du réseau contre les attaques courantes et surveillance continue.</p>
+                        <p style="color: var(--color-text-muted); font-size: 0.9375rem;" data-i18n="idx.sec.1.p">Protection active du réseau contre les attaques courantes et surveillance continue.</p>
                     </div>
                     <div style="text-align: center;">
                         <svg style="margin: 0 auto 1rem; color: var(--color-primary); width: 2.5rem; height: 2.5rem;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
                         <h3 style="font-size: 1.125rem; margin-bottom: 0.5rem;">Authentification Moderne</h3>
-                        <p style="color: var(--color-text-muted); font-size: 0.9375rem;">Intégration de technologies sécurisées telles que les Passkeys pour protéger les comptes.</p>
+                        <p style="color: var(--color-text-muted); font-size: 0.9375rem;" data-i18n="idx.sec.2.p">Intégration de technologies sécurisées telles que les Passkeys pour protéger les comptes.</p>
                     </div>
                     <div style="text-align: center;">
                         <svg style="margin: 0 auto 1rem; color: var(--color-primary); width: 2.5rem; height: 2.5rem;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 2v6h-6"></path><path d="M3 12a9 9 0 0 1 15-6.7L21 8"></path><path d="M3 22v-6h6"></path><path d="M21 12a9 9 0 0 1-15 6.7L3 16"></path></svg>
                         <h3 style="font-size: 1.125rem; margin-bottom: 0.5rem;">Synchronisation Sécurisée</h3>
-                        <p style="color: var(--color-text-muted); font-size: 0.9375rem;">Transfert maîtrisé des données de l'application hors-ligne vers nos serveurs centraux.</p>
+                        <p style="color: var(--color-text-muted); font-size: 0.9375rem;" data-i18n="idx.sec.3.p">Transfert maîtrisé des données de l'application hors-ligne vers nos serveurs centraux.</p>
                     </div>
                 </div>
             </div>
@@ -1935,19 +603,19 @@
                 <div class="stats-grid reveal">
                     <div class="stat-item">
                         <div class="stat-number" data-target="50" data-suffix="+">0</div>
-                        <div class="stat-label">Enseignants actifs</div>
+                        <div class="stat-label" data-i18n="idx.stat.1">Enseignants actifs</div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-number" data-target="3" data-suffix="+">0</div>
-                        <div class="stat-label">Établissements partenaires</div>
+                        <div class="stat-label" data-i18n="idx.stat.2">Établissements partenaires</div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-number" data-target="95" data-suffix="%">0</div>
-                        <div class="stat-label">Taux de satisfaction</div>
+                        <div class="stat-label" data-i18n="idx.stat.3">Taux de satisfaction</div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-number" data-target="70" data-suffix="%">0</div>
-                        <div class="stat-label">Temps gagné sur la saisie</div>
+                        <div class="stat-label" data-i18n="idx.stat.4">Temps gagné sur la saisie</div>
                     </div>
                 </div>
             </div>
@@ -1957,23 +625,23 @@
         <section class="bg-alt">
             <div class="container">
                 <div class="section-header reveal">
-                    <span class="eyebrow">Transformation</span>
-                    <h2>Avant vs Après DJANGOU</h2>
-                    <p>Voyez concrètement ce que DJANGOU change dans votre quotidien d'enseignant.</p>
+                    <span class="eyebrow" data-i18n="idx.comp.eyebrow">Transformation</span>
+                    <h2 data-i18n="idx.comp.h2">Avant vs Après DJANGOU</h2>
+                    <p data-i18n="idx.comp.p">Voyez concrètement ce que DJANGOU change dans votre quotidien d'enseignant.</p>
                 </div>
                 <div class="compare-grid reveal">
                     <div class="compare-card compare-before">
                         <div class="compare-label">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
-                            Sans DJANGOU
+                            <span data-i18n="idx.comp.sans">Sans DJANGOU</span>
                         </div>
                         <ul class="compare-list">
-                            <li>Saisie manuelle note par note sur papier</li>
-                            <li>Calcul des moyennes à la main ou sous Excel</li>
-                            <li>Bulletins créés un par un en heures</li>
-                            <li>Perte de travail si la connexion coupe</li>
-                            <li>Documents éparpillés sur plusieurs fichiers</li>
-                            <li>Risque d'erreurs de calcul fréquent</li>
+                            <li data-i18n="idx.comp.sans.1">Saisie manuelle note par note sur papier</li>
+                            <li data-i18n="idx.comp.sans.2">Calcul des moyennes à la main ou sous Excel</li>
+                            <li data-i18n="idx.comp.sans.3">Bulletins créés un par un en heures</li>
+                            <li data-i18n="idx.comp.sans.4">Perte de travail si la connexion coupe</li>
+                            <li data-i18n="idx.comp.sans.5">Documents éparpillés sur plusieurs fichiers</li>
+                            <li data-i18n="idx.comp.sans.6">Risque d'erreurs de calcul fréquent</li>
                         </ul>
                     </div>
                     <div class="compare-divider" aria-hidden="true">
@@ -1982,15 +650,15 @@
                     <div class="compare-card compare-after">
                         <div class="compare-label">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                            Avec DJANGOU
+                            <span data-i18n="idx.comp.avec">Avec DJANGOU</span>
                         </div>
                         <ul class="compare-list">
-                            <li>Notes saisies à la voix en quelques secondes</li>
-                            <li>Calculs automatiques et instantanés</li>
-                            <li>Bulletins PDF générés en un clic</li>
-                            <li>Travail continu même hors connexion</li>
-                            <li>Tout centralisé sur une seule plateforme</li>
-                            <li>Aucune erreur de calcul possible</li>
+                            <li data-i18n="idx.comp.avec.1">Notes saisies à la voix en quelques secondes</li>
+                            <li data-i18n="idx.comp.avec.2">Calculs automatiques et instantanés</li>
+                            <li data-i18n="idx.comp.avec.3">Bulletins PDF générés en un clic</li>
+                            <li data-i18n="idx.comp.avec.4">Travail continu même hors connexion</li>
+                            <li data-i18n="idx.comp.avec.5">Tout centralisé sur une seule plateforme</li>
+                            <li data-i18n="idx.comp.avec.6">Aucune erreur de calcul possible</li>
                         </ul>
                     </div>
                 </div>
@@ -2000,88 +668,88 @@
         <section id="faq">
             <div class="container">
                 <div class="section-header reveal">
-                    <h2>Questions fréquentes</h2>
-                    <p>Tout ce que vous devez savoir pour bien comprendre le fonctionnement de DJANGOU.</p>
+                    <h2 data-i18n="idx.faq.h2">Questions fréquentes</h2>
+                    <p data-i18n="idx.faq.desc">Tout ce que vous devez savoir pour bien comprendre le fonctionnement de DJANGOU.</p>
                 </div>
                 
                 <div class="faq-list reveal">
                     <div class="faq-item">
                         <button class="faq-question" aria-expanded="false">
-                            Qu'est-ce que DJANGOU ?
+                            <span data-i18n="idx.faq.1.q">Qu'est-ce que DJANGOU ?</span>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
                         </button>
                         <div class="faq-answer" hidden>
-                            <p>DJANGOU est une plateforme technologique dédiée au monde éducatif (EdTech). Elle est conçue pour aider les enseignants, directeurs et personnels administratifs à gérer plus rapidement et plus efficacement les élèves, les notes, les évaluations et la génération de bulletins.</p>
+                            <p data-i18n="idx.faq.1.a">DJANGOU est une plateforme technologique dédiée au monde éducatif (EdTech). Elle est conçue pour aider les enseignants, directeurs et personnels administratifs à gérer plus rapidement et plus efficacement les élèves, les notes, les évaluations et la génération de bulletins.</p>
                         </div>
                     </div>
                     
                     <div class="faq-item">
                         <button class="faq-question" aria-expanded="false">
-                            DJANGOU fonctionne-t-il sans Internet ?
+                            <span data-i18n="idx.faq.2.q">DJANGOU fonctionne-t-il sans Internet ?</span>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
                         </button>
                         <div class="faq-answer" hidden>
-                            <p>Oui. DJANGOU repose sur une architecture "Offline-First". Cela signifie que l'application est pensée pour continuer à fonctionner de manière transparente lors de coupures réseau. Les données saisies sont stockées localement sur votre appareil puis synchronisées en arrière-plan lorsque la connexion revient.</p>
+                            <p data-i18n="idx.faq.2.a">Oui. DJANGOU repose sur une architecture "Offline-First". Cela signifie que l'application est pensée pour continuer à fonctionner de manière transparente lors de coupures réseau. Les données saisies sont stockées localement sur votre appareil puis synchronisées en arrière-plan lorsque la connexion revient.</p>
                         </div>
                     </div>
 
                     <div class="faq-item">
                         <button class="faq-question" aria-expanded="false">
-                            Comment fonctionne la saisie vocale ?
+                            <span data-i18n="idx.faq.3.q">Comment fonctionne la saisie vocale ?</span>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
                         </button>
                         <div class="faq-answer" hidden>
-                            <p>L'application utilise l'Intelligence Artificielle pour analyser votre voix. En prononçant simplement "Martin, 15 sur 20", le système identifie l'élève et la note correspondante, puis remplit le tableau automatiquement, réduisant ainsi la saisie manuelle.</p>
+                            <p data-i18n="idx.faq.3.a">L'application utilise l'Intelligence Artificielle pour analyser votre voix. En prononçant simplement "Martin, 15 sur 20", le système identifie l'élève et la note correspondante, puis remplit le tableau automatiquement, réduisant ainsi la saisie manuelle.</p>
                         </div>
                     </div>
                     
                     <div class="faq-item">
                         <button class="faq-question" aria-expanded="false">
-                            Comment fonctionne le scan par IA ?
+                            <span data-i18n="idx.faq.4.q">Comment fonctionne le scan par IA ?</span>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
                         </button>
                         <div class="faq-answer" hidden>
-                            <p>En prenant en photo des documents ou copies compatibles, notre technologie d'OCR (Reconnaissance Optique de Caractères) assistée par IA extrait les textes et les chiffres pertinents pour les transformer en données numériques exploitables par la plateforme.</p>
+                            <p data-i18n="idx.faq.4.a">En prenant en photo des documents ou copies compatibles, notre technologie d'OCR (Reconnaissance Optique de Caractères) assistée par IA extrait les textes et les chiffres pertinents pour les transformer en données numériques exploitables par la plateforme.</p>
                         </div>
                     </div>
 
                     <div class="faq-item">
                         <button class="faq-question" aria-expanded="false">
-                            DJANGOU peut-il générer des bulletins ?
+                            <span data-i18n="idx.faq.5.q">DJANGOU peut-il générer des bulletins ?</span>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
                         </button>
                         <div class="faq-answer" hidden>
-                            <p>Oui. Une fois les notes et barèmes enregistrés, le personnel autorisé peut générer automatiquement des bulletins scolaires au format PDF, prêts à être imprimés ou envoyés, ainsi que des procès-verbaux globaux au format Excel.</p>
+                            <p data-i18n="idx.faq.5.a">Oui. Une fois les notes et barèmes enregistrés, le personnel autorisé peut générer automatiquement des bulletins scolaires au format PDF, prêts à être imprimés ou envoyés, ainsi que des procès-verbaux globaux au format Excel.</p>
                         </div>
                     </div>
 
                     <div class="faq-item">
                         <button class="faq-question" aria-expanded="false">
-                            Peut-on utiliser DJANGOU sur téléphone ?
+                            <span data-i18n="idx.faq.6.q">Peut-on utiliser DJANGOU sur téléphone ?</span>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
                         </button>
                         <div class="faq-answer" hidden>
-                            <p>Absolument. En tant que PWA (Progressive Web App), DJANGOU est optimisée pour s'adapter parfaitement aux écrans tactiles des smartphones, même ceux d'entrée de gamme, offrant une expérience fluide sans nécessiter de téléchargement lourd.</p>
+                            <p data-i18n="idx.faq.6.a">Absolument. En tant que PWA (Progressive Web App), DJANGOU est optimisée pour s'adapter parfaitement aux écrans tactiles des smartphones, même ceux d'entrée de gamme, offrant une expérience fluide sans nécessiter de téléchargement lourd.</p>
                         </div>
                     </div>
 
                     <div class="faq-item">
                         <button class="faq-question" aria-expanded="false">
-                            DJANGOU est-il adapté aux établissements scolaires ?
+                            <span data-i18n="idx.faq.7.q">DJANGOU est-il adapté aux établissements scolaires ?</span>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
                         </button>
                         <div class="faq-answer" hidden>
-                            <p>Oui, DJANGOU est pensé autant pour les enseignants individuels que pour l'administration globale d'un établissement. Les directeurs bénéficient d'outils de centralisation et de suivi des données scolaires.</p>
+                            <p data-i18n="idx.faq.7.a">Oui, DJANGOU est pensé autant pour les enseignants individuels que pour l'administration globale d'un établissement. Les directeurs bénéficient d'outils de centralisation et de suivi des données scolaires.</p>
                         </div>
                     </div>
 
                     <div class="faq-item">
                         <button class="faq-question" aria-expanded="false">
-                            Comment commencer avec DJANGOU ?
+                            <span data-i18n="idx.faq.8.q">Comment commencer avec DJANGOU ?</span>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
                         </button>
                         <div class="faq-answer" hidden>
-                            <p>Cliquez simplement sur l'un des boutons "Accéder à DJANGOU" sur cette page. Vous serez redirigé vers l'application principale où vous pourrez créer votre compte et configurer vos classes.</p>
+                            <p data-i18n="idx.faq.8.a">Cliquez simplement sur l'un des boutons "Accéder à DJANGOU" sur cette page. Vous serez redirigé vers l'application principale où vous pourrez créer votre compte et configurer vos classes.</p>
                         </div>
                     </div>
                 </div>
@@ -2092,24 +760,24 @@
         <section class="bg-alt">
             <div class="container">
                 <div class="section-header reveal">
-                    <span class="eyebrow">Ils nous font confiance</span>
-                    <h2>Adopté par des établissements innovants</h2>
-                    <p>Découvrez prochainement les retours d'expérience des écoles partenaires qui ont transformé leur gestion administrative avec DJANGOU.</p>
+                    <span class="eyebrow" data-i18n="idx.test.eyebrow">Ils nous font confiance</span>
+                    <h2 data-i18n="idx.test.h2">Adopté par des établissements innovants</h2>
+                    <p data-i18n="idx.test.desc">Découvrez prochainement les retours d'expérience des écoles partenaires qui ont transformé leur gestion administrative avec DJANGOU.</p>
                 </div>
                 
                 <div class="reveal" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
                     <!-- Placeholder Témoignage 1 -->
                     <div style="background: var(--color-bg-card); padding: 2rem; border-radius: var(--radius-lg); border: 1px dashed var(--color-border); text-align: center;">
                         <svg style="margin: 0 auto 1rem; color: #cbd5e1; width: 3rem; height: 3rem;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-                        <p style="color: var(--color-text-muted); font-style: italic; margin-bottom: 1.5rem;">« Emplacement réservé pour le futur témoignage d'un directeur d'établissement détaillant le temps gagné chaque trimestre. »</p>
-                        <h4 style="font-size: 1rem;">Directeur, Établissement Partenaire</h4>
+                        <p style="color: var(--color-text-muted); font-style: italic; margin-bottom: 1.5rem;" data-i18n="idx.test.1.p">« Emplacement réservé pour le futur témoignage d'un directeur d'établissement détaillant le temps gagné chaque trimestre. »</p>
+                        <h4 style="font-size: 1rem;" data-i18n="idx.test.1.h4">Directeur, Établissement Partenaire</h4>
                     </div>
                     
                     <!-- Placeholder Témoignage 2 -->
                     <div style="background: var(--color-bg-card); padding: 2rem; border-radius: var(--radius-lg); border: 1px dashed var(--color-border); text-align: center;">
                         <svg style="margin: 0 auto 1rem; color: #cbd5e1; width: 3rem; height: 3rem;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-                        <p style="color: var(--color-text-muted); font-style: italic; margin-bottom: 1.5rem;">« Emplacement réservé pour l'avis d'un enseignant sur l'efficacité de la dictée vocale et la facilité de prise en main. »</p>
-                        <h4 style="font-size: 1rem;">Enseignant Principal</h4>
+                        <p style="color: var(--color-text-muted); font-style: italic; margin-bottom: 1.5rem;" data-i18n="idx.test.2.p">« Emplacement réservé pour l'avis d'un enseignant sur l'efficacité de la dictée vocale et la facilité de prise en main. »</p>
+                        <h4 style="font-size: 1rem;" data-i18n="idx.test.2.h4">Enseignant Principal</h4>
                     </div>
                 </div>
             </div>
@@ -2119,9 +787,9 @@
         <section id="contact" class="bg-alt">
             <div class="container">
                 <div class="section-header reveal">
-                    <span class="eyebrow">Contactez-nous</span>
-                    <h2>Une question ? Parlons-en.</h2>
-                    <p>Notre équipe est disponible pour répondre à toutes vos questions sur DJANGOU.</p>
+                    <span class="eyebrow" data-i18n="idx.contact.eyebrow">Contactez-nous</span>
+                    <h2 data-i18n="idx.contact.h2">Une question ? Parlons-en.</h2>
+                    <p data-i18n="idx.contact.desc">Notre équipe est disponible pour répondre à toutes vos questions sur DJANGOU.</p>
                 </div>
 
                 <div class="contact-wrapper reveal">
@@ -2150,65 +818,65 @@
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                             </div>
                             <div>
-                                <h4>Disponibilité</h4>
-                                <p>Lun – Ven, 8h – 18h (WAT)</p>
+                                <h4 data-i18n="idx.contact.disp.h4">Disponibilité</h4>
+                                <p data-i18n="idx.contact.disp.p">Lun – Ven, 8h – 18h (WAT)</p>
                             </div>
                         </div>
                         <div class="contact-badge">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                            Réponse généralement sous 24h
+                            <span data-i18n="idx.contact.badge">Réponse généralement sous 24h</span>
                         </div>
                     </div>
 
                     <!-- Formulaire droite -->
                     <form id="contact-form" class="contact-form" novalidate>
                         <div class="form-group">
-                            <label for="contact-name">Nom complet <span aria-hidden="true">*</span></label>
+                            <label for="contact-name"><span data-i18n="idx.contact.form.name">Nom complet</span> <span aria-hidden="true">*</span></label>
                             <div class="input-wrap">
                                 <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                                <input type="text" id="contact-name" name="from_name" placeholder="Ex : Moussa Diallo" required autocomplete="name" minlength="2">
+                                <input type="text" id="contact-name" name="from_name" placeholder="Ex : Moussa Diallo" data-i18n-placeholder="idx.contact.form.name_ph" required autocomplete="name" minlength="2">
                             </div>
-                            <span class="field-error" id="error-name">Veuillez entrer votre nom (min. 2 caractères).</span>
+                            <span class="field-error" id="error-name" data-i18n="idx.contact.form.name_err">Veuillez entrer votre nom (min. 2 caractères).</span>
                         </div>
 
                         <div class="form-group">
-                            <label for="contact-email">Adresse e-mail <span aria-hidden="true">*</span></label>
+                            <label for="contact-email"><span data-i18n="idx.contact.form.email">Adresse e-mail</span> <span aria-hidden="true">*</span></label>
                             <div class="input-wrap">
                                 <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                                <input type="email" id="contact-email" name="email" placeholder="Ex : moussa@ecole.sn" required autocomplete="email">
+                                <input type="email" id="contact-email" name="email" placeholder="Ex : moussa@ecole.sn" data-i18n-placeholder="idx.contact.form.email_ph" required autocomplete="email">
                             </div>
-                            <span class="field-error" id="error-email">Veuillez entrer une adresse e-mail valide.</span>
+                            <span class="field-error" id="error-email" data-i18n="idx.contact.form.email_err">Veuillez entrer une adresse e-mail valide.</span>
                         </div>
 
                         <div class="form-group">
-                            <label for="contact-subject">Sujet</label>
+                            <label for="contact-subject" data-i18n="idx.contact.form.subject">Sujet</label>
                             <div class="input-wrap">
                                 <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
-                                <input type="text" id="contact-subject" name="subject" placeholder="Ex : Question sur les bulletins" autocomplete="off">
+                                <input type="text" id="contact-subject" name="subject" placeholder="Ex : Question sur les bulletins" data-i18n-placeholder="idx.contact.form.subject_ph" autocomplete="off">
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="contact-message">Message <span aria-hidden="true">*</span></label>
+                            <label for="contact-message"><span data-i18n="idx.contact.form.message">Message</span> <span aria-hidden="true">*</span></label>
                             <div class="input-wrap">
-                                <textarea id="contact-message" name="message" placeholder="Décrivez votre question ou besoin..." required rows="5" minlength="10"></textarea>
+                                <textarea id="contact-message" name="message" placeholder="Décrivez votre question ou besoin..." data-i18n-placeholder="idx.contact.form.message_ph" required rows="5" minlength="10"></textarea>
                             </div>
-                            <span class="field-error" id="error-message">Veuillez entrer un message (min. 10 caractères).</span>
+                            <span class="field-error" id="error-message" data-i18n="idx.contact.form.message_err">Veuillez entrer un message (min. 10 caractères).</span>
                         </div>
 
                         <button type="submit" class="btn btn-primary contact-submit" id="contact-submit">
-                            <span class="btn-text">Envoyer le message</span>
+                            <span class="btn-text" data-i18n="idx.contact.form.submit">Envoyer le message</span>
                             <span class="btn-loader" aria-hidden="true"></span>
                             <svg class="btn-send-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
                         </button>
 
                         <div class="form-success" id="form-success" role="alert" aria-live="polite" hidden>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                            Message envoyé avec succès ! Nous vous répondrons sous 24h.
+                            <span data-i18n="idx.contact.form.success">Message envoyé avec succès ! Nous vous répondrons sous 24h.</span>
                         </div>
                         <div class="form-error-global" id="form-error-global" role="alert" aria-live="polite" hidden>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
-                            Une erreur s'est produite. Veuillez réessayer ou nous écrire directement à djangousupportpro@gmail.com.
+                            <span data-i18n="idx.contact.form.error">Une erreur s'est produite. Veuillez réessayer ou nous écrire directement à djangousupportpro@gmail.com.</span>
                         </div>
                     </form>
                 </div>
@@ -2219,9 +887,9 @@
         <section>
             <div class="container">
                 <div class="cta-section reveal">
-                    <h2>Moins de saisie. Plus de temps pour enseigner.</h2>
-                    <p>Rejoignez les enseignants et directeurs qui modernisent leur gestion scolaire.</p>
-                    <a href="coming-soon.html" class="btn btn-white">Découvrir DJANGOU</a>
+                    <h2 data-i18n="idx.cta.h2">Moins de saisie. Plus de temps pour enseigner.</h2>
+                    <p data-i18n="idx.cta.desc">Rejoignez les enseignants et directeurs qui modernisent leur gestion scolaire.</p>
+                    <a href="coming-soon.html" class="btn btn-white" data-i18n="idx.cta.btn">Découvrir DJANGOU</a>
                 </div>
             </div>
         </section>
@@ -2236,40 +904,40 @@
                             <img src="logo.jpg" alt="DJANGOU Logo" style="height: 32px; width: auto;">
                         </div>
                     </a>
-                    <p style="margin-top: 1rem; max-width: 300px;">La plateforme EdTech de gestion scolaire conçue pour fonctionner avec ou sans connexion internet.</p>
+                    <p style="margin-top: 1rem; max-width: 300px;" data-i18n="idx.footer.desc">La plateforme EdTech de gestion scolaire conçue pour fonctionner avec ou sans connexion internet.</p>
                 </div>
                 
                 <div>
-                    <h3 class="footer-heading">Produit</h3>
+                    <h3 class="footer-heading" data-i18n="idx.footer.prod">Produit</h3>
                     <div class="footer-links">
-                        <a href="#fonctionnalites">Fonctionnalités</a>
-                        <a href="#offline">Mode Hors-ligne</a>
-                        <a href="#ia">Intelligence IA</a>
-                        <a href="#securite">Sécurité</a>
+                        <a href="#fonctionnalites" data-i18n="idx.nav.feat">Fonctionnalités</a>
+                        <a href="#offline" data-i18n="idx.footer.offline">Mode Hors-ligne</a>
+                        <a href="#ia" data-i18n="idx.footer.ia">Intelligence IA</a>
+                        <a href="#securite" data-i18n="idx.footer.sec">Sécurité</a>
                     </div>
                 </div>
                 
                 <div>
-                    <h3 class="footer-heading">Ressources</h3>
+                    <h3 class="footer-heading" data-i18n="idx.footer.res">Ressources</h3>
                     <div class="footer-links">
-                        <a href="#faq">Questions fréquentes (FAQ)</a>
-                        <a href="coming-soon.html">Connexion</a>
-                        <a href="coming-soon.html">Inscription</a>
+                        <a href="#faq" data-i18n="idx.footer.faq">Questions fréquentes (FAQ)</a>
+                        <a href="coming-soon.html" data-i18n="idx.footer.login">Connexion</a>
+                        <a href="coming-soon.html" data-i18n="idx.footer.signup">Inscription</a>
                     </div>
                 </div>
                 
                 <div>
-                    <h3 class="footer-heading">Légal</h3>
+                    <h3 class="footer-heading" data-i18n="idx.footer.leg">Légal</h3>
                     <div class="footer-links">
-                        <a href="https://djangou-landing-page2.vercel.app">Confidentialité</a>
-                        <a href="https://djangou-landing-page2.vercel.app">Conditions d'utilisation</a>
+                        <a href="https://djangou-landing-page2.vercel.app" data-i18n="idx.footer.priv">Confidentialité</a>
+                        <a href="https://djangou-landing-page2.vercel.app" data-i18n="idx.footer.term">Conditions d'utilisation</a>
                     </div>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2026 DJANGOU. Tous droits réservés.</p>
-                <p>Propulsé par l'innovation EdTech.</p>
+                <p data-i18n="idx.footer.copy">&copy; 2026 DJANGOU. Tous droits réservés.</p>
+                <p data-i18n="idx.footer.prop">Propulsé par l'innovation EdTech.</p>
             </div>
         </div>
     </footer>
@@ -2299,35 +967,7 @@
                 });
             });
 
-            // Theme Toggle
-            const themeToggle = document.getElementById('theme-toggle');
-            const sunIcon = themeToggle.querySelector('.sun-icon');
-            const moonIcon = themeToggle.querySelector('.moon-icon');
-            
-            // Verifier la preference sauvegardée ou celle du système
-            const savedTheme = localStorage.getItem('theme');
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            
-            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-                document.documentElement.setAttribute('data-theme', 'dark');
-                sunIcon.style.display = 'block';
-                moonIcon.style.display = 'none';
-            }
-            
-            themeToggle.addEventListener('click', () => {
-                const currentTheme = document.documentElement.getAttribute('data-theme');
-                if (currentTheme === 'dark') {
-                    document.documentElement.removeAttribute('data-theme');
-                    localStorage.setItem('theme', 'light');
-                    sunIcon.style.display = 'none';
-                    moonIcon.style.display = 'block';
-                } else {
-                    document.documentElement.setAttribute('data-theme', 'dark');
-                    localStorage.setItem('theme', 'dark');
-                    sunIcon.style.display = 'block';
-                    moonIcon.style.display = 'none';
-                }
-            });
+
 
             // 3D Tilt Effect (Optimisé pour perfs & fallback CSS)
             const tiltCards = document.querySelectorAll('.feature-card');
@@ -2372,7 +1012,7 @@
             });
 
             // ── Typewriter Effect ───────────────────────────────────────────
-            const textToType = "même sans connexion.";
+            const textToType = window.i18n ? window.i18n.t('idx.js.typewriter') : "même sans connexion.";
             const typeWriterEl = document.querySelector('.typewriter-text');
             if (typeWriterEl) {
                 let charIndex = 0;
@@ -2400,6 +1040,10 @@
                     setTimeout(typeWriter, typingSpeed);
                 }
                 setTimeout(typeWriter, 1000); // Initial delay
+                window.addEventListener('languageChanged', (e) => {
+                    const newText = window.i18n.t('idx.js.typewriter');
+                    typeWriterEl.innerHTML = `<span class="text-gradient">${newText}</span>`;
+                });
             }
 
             // ── Animated Counters ───────────────────────────────────────────
@@ -2564,11 +1208,11 @@
     <!-- Bannière RGPD -->
     <div id="rgpd-banner" class="rgpd-banner hidden" role="dialog" aria-labelledby="rgpd-text">
         <div id="rgpd-text" class="rgpd-text">
-            <strong>Votre vie privée est importante.</strong> Nous utilisons uniquement les cookies nécessaires au bon fonctionnement de la plateforme (comme le thème sombre).
+            <span data-i18n="idx.rgpd.text"><strong>Votre vie privée est importante.</strong> Nous utilisons uniquement les cookies nécessaires au bon fonctionnement de la plateforme (comme le thème sombre).</span>
         </div>
         <div class="rgpd-actions">
-            <button id="rgpd-decline" class="rgpd-btn rgpd-decline">Continuer sans accepter</button>
-            <button id="rgpd-accept" class="rgpd-btn rgpd-accept">J'accepte</button>
+            <button id="rgpd-decline" class="rgpd-btn rgpd-decline" data-i18n="idx.rgpd.decline">Continuer sans accepter</button>
+            <button id="rgpd-accept" class="rgpd-btn rgpd-accept" data-i18n="idx.rgpd.accept">J'accepte</button>
         </div>
     </div>
     <!-- ============================================================
