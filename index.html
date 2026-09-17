@@ -5,6 +5,8 @@
     <meta name="google-site-verification" content="c0JmpZgzUUc4oJKbf0SZcl4fBHhRUcdvWuI4FVmokfQ" />
 
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://api.emailjs.com;">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="description" content="DJANGOU : La plateforme EdTech hors-ligne et intelligente pour les enseignants et établissements scolaires. Gérez vos notes, bulletins et évaluations plus rapidement, même sans connexion internet.">
     <meta name="theme-color" content="#2563eb">
@@ -675,6 +677,30 @@
     </noscript>
 <script src="i18n-dictionary.js"></script>
     <script src="i18n.js"></script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Djangou",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Web",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Start",
+          "price": "1500",
+          "priceCurrency": "XOF"
+        },
+        {
+          "@type": "Offer",
+          "name": "Premium",
+          "price": "3000",
+          "priceCurrency": "XOF"
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
     <div id="scroll-progress" aria-hidden="true"></div>
@@ -685,7 +711,7 @@
         <div class="container header-inner">
             <a href="https://djangou-landing-page2.vercel.app" class="logo" aria-label="DJANGOU - Accueil">
                 <div style="background: white; padding: 4px 8px; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center;">
-                    <img src="logo.webp" alt="DJANGOU Logo" style="height: 48px; width: auto;">
+                    <img src="logo.webp" alt="DJANGOU Logo" style="height: 48px; width: auto;" width="1024" height="1024">
                 </div>
             </a>
             
@@ -774,6 +800,7 @@
                 <div class="features-grid reveal">
                     <!-- Feature 1 -->
                     <div class="feature-card">
+                        <div class="laser-scan-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; overflow: hidden; border-radius: var(--radius-lg); z-index: 1;"><div class="laser-line"></div></div>
                         <div class="feature-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
@@ -795,6 +822,14 @@
                         </div>
                         <h3 data-i18n="idx.feat.2.h3">Dictée Vocale Intelligente</h3>
                         <p data-i18n="idx.feat.2.p">Énoncez vos notes à voix haute. L'IA les comprend et remplit automatiquement le tableau des élèves depuis votre téléphone.</p>
+                    
+                        <div class="voice-demo" aria-hidden="true" style="margin-top: 1rem; padding: 0.5rem; background: var(--color-bg-alt); border-radius: 8px; font-size: 0.8rem; cursor: pointer; text-align: left; border: 1px dashed var(--color-border); transition: all 0.2s;">
+                            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.25rem;">
+                                <span class="voice-demo-btn" style="background: var(--color-primary); color: white; border-radius: 50%; width: 24px; height: 24px; display: inline-flex; align-items: center; justify-content: center; transition: transform 0.2s;">🎤</span>
+                                <span style="opacity: 0.7;">Test (Démo)</span>
+                            </div>
+                            <div class="voice-demo-content" style="min-height: 40px; font-family: monospace; color: var(--color-text-main); white-space: pre-line;"></div>
+                        </div>
                     </div>
 
                     <!-- Feature 3 -->
@@ -2166,7 +2201,7 @@
                 <div class="footer-brand">
                     <a href="https://djangou-landing-page2.vercel.app" class="logo">
                         <div style="background: white; padding: 6px 12px; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center;">
-                            <img src="logo.webp" alt="DJANGOU Logo" style="height: 32px; width: auto;" loading="lazy">
+                            <img src="logo.webp" alt="DJANGOU Logo" style="height: 32px; width: auto;" loading="lazy" width="1024" height="1024">
                         </div>
                     </a>
                     <p style="margin-top: 1rem; max-width: 300px;" data-i18n="idx.footer.desc">La plateforme EdTech de gestion scolaire conçue pour fonctionner avec ou sans connexion internet.</p>
@@ -2558,6 +2593,50 @@
             window.addEventListener('scroll', onScroll, { passive: true });
             window.addEventListener('resize', onScroll, { passive: true });
             onScroll(); // initial state
+
+            // ── V2 OPTIMIZATIONS (ROI & Voice Demo) ──
+            const roiStudents = document.getElementById('roi-students');
+            const roiStudentsVal = document.getElementById('roi-students-val');
+            const roiTimeVal = document.getElementById('roi-time-val');
+            
+            if (roiStudents && roiStudentsVal && roiTimeVal) {
+                roiStudents.addEventListener('input', (e) => {
+                    const students = parseInt(e.target.value);
+                    roiStudentsVal.textContent = students;
+                    // 4 minutes par eleve = 4/60 heures
+                    const hours = Math.round((students * 4) / 60);
+                    roiTimeVal.textContent = hours;
+                });
+            }
+            
+            const voiceDemoBtn = document.querySelector('.voice-demo');
+            if (voiceDemoBtn) {
+                const voiceContent = voiceDemoBtn.querySelector('.voice-demo-content');
+                let isPlaying = false;
+                
+                voiceDemoBtn.addEventListener('click', () => {
+                    if (isPlaying) return;
+                    isPlaying = true;
+                    voiceContent.textContent = '';
+                    voiceDemoBtn.style.borderColor = 'var(--color-primary)';
+                    voiceDemoBtn.querySelector('.voice-demo-btn').style.transform = 'scale(1.1)';
+                    
+                    const text = "Martin : 15/20\nSophie : 17/20\nPaul : 12/20";
+                    let i = 0;
+                    
+                    const typeWriter = setInterval(() => {
+                        voiceContent.textContent += text.charAt(i);
+                        i++;
+                        if (i >= text.length) {
+                            clearInterval(typeWriter);
+                            isPlaying = false;
+                            voiceDemoBtn.style.borderColor = 'var(--color-border)';
+                            voiceDemoBtn.querySelector('.voice-demo-btn').style.transform = 'scale(1)';
+                        }
+                    }, 50); // 50ms per char
+                });
+            }
+
             
             if (backToTopBtn) {
                 backToTopBtn.setAttribute('tabindex', '-1');
