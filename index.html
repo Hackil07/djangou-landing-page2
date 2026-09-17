@@ -725,6 +725,8 @@
                     <a href="#offline">Offline-First</a>
                     <a href="#ia" data-i18n="idx.footer.ia">Intelligence IA</a>
                     <a href="#securite" data-i18n="idx.footer.sec">Sécurité</a>
+                    <a href="#abonnements">Abonnements</a>
+                    <a href="#a-propos">À propos</a>
                     <a href="#faq" data-i18n="idx.nav.faq">FAQ</a>
                     <a href="#contact" data-i18n="idx.nav.contact">Contact</a>
                     
@@ -793,7 +795,8 @@
         <section id="fonctionnalites" class="bg-alt">
             <div class="container">
                 <div class="section-header reveal">
-                    <h2 data-i18n="idx.feat.h2">Moins de saisie manuelle. Plus de temps pour enseigner.</h2>
+                    <h2 style="font-size: 2.2rem; font-weight: 800; margin-bottom: 0.5rem;">Fonctionnalités de Djangou</h2>
+                    <p class="section-subtitle" data-i18n="idx.feat.h2" style="font-size: 1.1rem; color: var(--color-text-muted); margin-bottom: 3rem;">Moins de saisie manuelle. Plus de temps pour enseigner.</p>
                     <p data-i18n="idx.feat.desc">Découvrez comment nos fonctionnalités repensent le travail administratif scolaire pour éliminer les tâches répétitives et chronophages.</p>
                     <div class="lang-badges">
                         <span class="lang-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg> Français</span>
@@ -1729,7 +1732,7 @@
 
 
         <!-- TARIFICATION -->
-        <section id="tarifs" class="pricing-section">
+        <section id="abonnements" class="pricing-section">
             <div class="container">
                 <div class="pricing-header reveal">
                     <h2>Nos abonnements</h2>
@@ -2086,11 +2089,25 @@
         </section>
 
         <!-- CONTACT -->
+        
+        <!-- A PROPOS -->
+        <section id="a-propos" style="padding: 5rem 0; border-top: 1px solid var(--color-border);">
+            <div class="container text-center reveal">
+                <h2 style="font-size: 2.2rem; font-weight: 800; margin-bottom: 1.5rem;">À propos de Djangou</h2>
+                <p style="max-width: 800px; margin: 0 auto; color: var(--color-text-muted); font-size: 1.125rem; line-height: 1.7;">
+                    Développée pour répondre aux réalités des établissements scolaires au <strong>Cameroun</strong> et en <strong>Afrique</strong>, 
+                    Djangou est la plateforme EdTech qui fonctionne nativement sans connexion internet pour surmonter les instabilités réseau. 
+                    Nous accompagnons les enseignants, les directeurs et les écoles dans leur transformation numérique avec des outils simples, intelligents et adaptés.
+                </p>
+            </div>
+        </section>
+
         <section id="contact" class="bg-alt">
             <div class="container">
                 <div class="section-header reveal">
                     <span class="eyebrow" data-i18n="idx.contact.eyebrow">Contactez-nous</span>
-                    <h2 data-i18n="idx.contact.h2">Une question ? Parlons-en.</h2>
+                    <h2>Contactez Djangou</h2>
+                    <p class="section-subtitle" data-i18n="idx.contact.h2" style="font-size: 1.1rem; color: var(--color-text-muted); margin-bottom: 2rem;">Une question ? Parlons-en.</p>
                     <p data-i18n="idx.contact.desc">Notre équipe est disponible pour répondre à toutes vos questions sur DJANGOU.</p>
                 </div>
 
@@ -2218,6 +2235,9 @@
                         <a href="#offline" data-i18n="idx.footer.offline">Mode Hors-ligne</a>
                         <a href="#ia" data-i18n="idx.footer.ia">Intelligence IA</a>
                         <a href="#securite" data-i18n="idx.footer.sec">Sécurité</a>
+                        <a href="#abonnements">Abonnements</a>
+                        <a href="#a-propos">À propos</a>
+                        <a href="#contact">Contact</a>
                     </div>
                 </div>
                 
@@ -2323,7 +2343,7 @@
 
             // GESTION DU MODAL AVEC INTERSECTION OBSERVER
             const promoModal = document.getElementById('promo-modal');
-            const pricingSection = document.getElementById('tarifs');
+            const pricingSection = document.getElementById('abonnements');
             const btnClosePromo = document.getElementById('promo-close');
             const btnClosePromoBtn = document.getElementById('promo-close-btn');
             const btnCtaPromo = document.getElementById('promo-cta');
