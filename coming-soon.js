@@ -1,6 +1,6 @@
 
         // Date cible : 21 Septembre 2026 à 00:00:00
-        const targetDate = new Date('2026-09-29T00:00:00').getTime();
+        const targetDate = new Date('2026-10-05T00:00:00').getTime();
         const targetUrl = 'https://djangou.site/';
         let isRedirecting = false;
 
